@@ -1,0 +1,38 @@
+.first-container{background:url("../../img/first/background.png");overflow: hidden;}
+.personal{width: 1150px;margin:50px auto 0;}
+.personal>img{display: inline-block;vertical-align: middle;width: 50px;}
+.personal>h1{display: inline-block;vertical-align: middle;margin-left: 20px;font-size: 240%}
+.right h1{padding-left: 70px;}
+table{width: 1150px;margin: auto;border-bottom: 2px solid #999999;border-top:2px solid #999999;text-align: center;}
+table td{height: 40px;border-bottom: 2px dashed #999999;border-right: 2px dashed #999999;line-height: 2em;font-size: 140%;word-wrap: break-word; word-break: break-all;}
+table td:last-child{border-right: none!important;}
+table tr:last-child td{border-bottom: none!important;}
+.left{text-align: left;padding-left:10px;font-weight: normal!important;}
+.tab_tr{background-color: #E7E6E6;font-weight: bold;font-size: 120%;}
+.text{line-height: 2em;text-indent: 2em;text-align: justify;word-wrap: break-word; word-break: break-all;}
+.dui{display: inline-block;width: 15px;height: 15px;border: 1px solid #595959;vertical-align: baseline;margin: 0 10px;line-height: 0.9em;font-size: 95%;}
+
+.tab1 td{width: 20%;}
+.tab1 td:nth-of-type(3){width: 18%;}
+.tab1 td:nth-of-type(4){width: 22%;}
+.tab1_1,.tab2_2,.tab3_3{margin-top: 70px;}
+.tab2 td:nth-of-type(1){width: 13%;font-weight: bold;}
+.tab2 td:nth-of-type(2){width: 87%;padding: 0 10px;text-align: justify;}
+.tab2{margin-bottom: 150px;}
+.bz{font-size: 120%}
+.tab3 .tab3_tr{font-weight: bold;font-size: 110%}
+.tab3 td{font-size: 130%;word-break: break-word;}
+.tab3 td:nth-of-type(1){width: 10%;}
+.tab3 td:nth-of-type(2){width: 17%;}
+.tab3 td:nth-of-type(3){width: 25%;text-align: left;padding:0 7px;}
+.tab3 td:nth-of-type(4){width: 48%;text-align: left;padding-left:7px;}
+.tab3 tr:nth-of-type(2n) td{background-color:rgb(237, 237, 237);}
+.tab3 tr td.actived{color: rgb(194, 0, 0); font-weight: bold;}
+
+.switch-cont{background-color: #E7E6E6; border: 1px solid #b3acac; border-radius: 10px;}
+.switch-cont span{margin-left: 10px;}
+.switch-cont i{display: block; float: right; width: 25px; height: 19px;background-color: red;background:url("../../img/first/down.png");margin: 12px;}
+.switch-cont p{display: none; background-color: #fff; padding: 10px;}
+.switch-show p{display:block;}
+.switch-show i{background:url("../../img/first/up.png");}
+

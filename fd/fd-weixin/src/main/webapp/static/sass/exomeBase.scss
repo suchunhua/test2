@@ -1,0 +1,64 @@
+/**
+* CONTENTS
+* exomeHome style
+*
+* SETTINGS
+* normalize ............................. normalize style storage file
+* reset ................................. reset style storage file
+* common ................................. reset style storage file
+* 
+* COMPONENTS
+*
+* BUSINESS
+*
+*/
+@charset 'utf-8';
+@import "dist/img","dist/table";
+@import "mixins/normalize","mixins/reset";
+@import "services/view","services/header","services/slider","services/footer","services/tab","services/list";
+
+.width-hundred{width: 100%;margin-top:20px;}
+.simple-table{
+	@extend .table3col;border-top: none;padding: 0px; 
+	thead{
+		tr{
+			th{border-bottom: 1px solid #dfdfdf;padding: 5% 0px;@include media-font-size();}
+		}
+	}
+	tbody{
+		tr{
+			padding: 5% 0px;@include media-font-size(12px,14px,16px,18px,20px);
+		}
+	}
+}
+.black-search-box{
+	background-color: #e9e9e9;overflow: hidden;
+	.black-search{
+		position: relative; width: 85%; margin: 7px auto;
+		i.icon-fd-black-search{background: url(../img/icon/icon-fd-black-search.png) center center no-repeat; display: block; width: 25px; height: 21px; background-size: contain; position: absolute; top: 50%; margin-top: -11px; left: 4px;}
+		input.search-input{width: 100%; padding-left: 30px; background-color: transparent; height: 30px; border: 1px solid #000; border-radius: 10px;}
+	}
+}
+
+h1.left-line-title{border-left: 4px solid #b81b2c; padding-left: 10px; margin: 10px 0px;overflow: hidden;@include media-font-size(16px,18px,20px,22px,30px);}
+h1.left-dot-title{
+	padding: 10px 3%;
+	i{@extend i.left-dot;}
+}
+
+h1.center{text-align: center;margin: 10px;@include media-font-size(16px,18px,20px,22px,30px);}
+img.center{display: block;margin: 10px auto;}
+
+i.left-dot{ width: 7px; height: 7px; display: inline-block; background-color: #b81b2c; vertical-align: middle; margin-right: 3%; border-radius: 50%;}
+
+.img-box{ 
+	width: 100%; position: relative;margin-bottom: 3%;
+	h1{width: 100%; height: 99%; background-color: rgba(0,0,0,0.5); text-align: center; line-height: 1.5; position: absolute; top: 0; left: 0;}
+    i{
+    	color: #fff; display: block;@include media-font-size(16px,18px,20px,22px,30px);
+    	&:first-child{margin-top: 25%;}
+    }
+	img{width: 100%;height: 100%;}
+}
+
+.border-red-tab{border-bottom: 1px solid #eeeeee;}

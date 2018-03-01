@@ -1,0 +1,271 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+<%@ include file="common/taglibs.jsp" %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>首度生物科技（苏州）有限公司 | 基因检测-肿瘤基因-癌症检测-靶向药物</title>
+    <link rel="shortcut icon"  href="${ctx}/static/img/16.png">
+    <link rel="stylesheet" href="${ctx}/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${ctx}/static/css/base.css">
+    <link rel="stylesheet" href="${ctx}/static/css/max.css">
+    <link rel="stylesheet" href="${ctx}/static/css/middle.css">
+    <link rel="stylesheet" href="${ctx}/static/css/min.css"> 
+<link rel="stylesheet" type="text/css" href="${ctx}/static/css/production.css"> 
+    <script src="${ctx}/static/plugin/jquery/3.1.0/jquery.min.js"></script>
+    <script src="${ctx}/static/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<%@ include file="common/top.jsp" %> 
+    
+<div id="fullpage" class="container top">
+    <div class="section">
+        <h1 class="blod">FD-180系列产品</h1>
+        <ul class="pro-nav">
+            <li class="active" data-name="ctDNA"> FD-180-Tissue™(首度-180-组织) </li>
+            <li data-name="Tissue"> FD-180-ctDNA™(首度-180-无创) </li>
+        </ul>
+        <div class="gray-bg">
+            <div class="introduce" data-name="ctDNA">
+                <div class="row">
+                    <span>临床背景：</span> 传统的癌症分类和诊疗聚焦于疾病的原发位点，例如肺癌，乳腺癌，结肠癌等。但是，基因组的各种改变（点突变、位移、拷贝数增加等）才是导致癌症的真正原因。随着人们对基因变异的深入了解，我们已经可以确定某些变异是导致癌症的驱动变异，并且对于一些驱动变异，已经开发出有针对性的靶向治疗药品。相比传统的化疗方法，靶向治疗效果更佳且产生的毒性较低。这些治疗方法跟癌症的原发位点关系不大却与驱动变异密切相关，只要确定了变异的信息，就可以确定治疗的方案。我们的目标：对于所有癌症，无论其原发位点在什么位置，通过基因测序确定其致癌的变异，达到分子层面的病理诊断，进而推荐有效的靶向药品。
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        FD-Tissue-180使用高通量测序平台、精确测定约 180个重要癌症相关基因的5种变异( 点突变、缺失、插入、拷贝数变化和重排) 。选择基因的标准为：
+                        <ul>
+                            <li>癌症遗传易感基因</li>
+                            <li>化疗用药及药物代谢相关基因</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        我们同时检测这些基因的所有编码区。测序覆盖深度约1 000X，有效提升变异检出率，减少以下因素的不利影响 ：
+                        <ul>
+                            <li>肿瘤组织样品量少</li>
+                            <li>样本纯度低</li>
+                            <li>肿瘤的异质度高</li>
+                            <li>可能导致复发的低频突变</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="introduce" data-name="Tissue">
+                <div class="row">
+                    <span>临床背景：</span> 人体内的正常细胞在代谢、凋亡过程中会 将其DNA片段释放到血液里。癌症细胞也会经历类似的过程。我们可 以从外周血中收集到癌细胞释放的游离DNA片段（ctDNA），通过高 深度二代测序技术获取这些片段的变异信息，进而明确人体内的癌变 现状并确定应对癌变的治疗方案，这就是基于检测cfDNA的液体活检 。应用这种方法我们可以有效的检测一个外表健康的人，其体内是否 已经发生了癌症相关的重要变异（癌前病变），也可以根据变异信息 指导癌症患者靶向用药或者确定治疗的状态（是否容易复发、是否产 生新的耐药变异等）。相比基于癌症组织样本的检测方法, 液体活检 的适用范围更广泛，对检测样本的要求更简单易操作，而且能更有效 地解决肿瘤组织的异质性问题。同时，它也对样本的测序深度、准确 度及信息分析精准性提出更高的要求 </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        无创癌症基因检测，只需患者10ml血样，从中定向捕获、富集约180个基因的DNA全编码区序列，通过深度(≥5000X)二代测序，检测变异(点突变、缺失、插入和重排)。可以检测出血液中~0 .1%的癌变DNA
+                    </div>
+                    <div class="col-md-6">
+                        对于癌症患者，不仅可以推荐用药，也可以观察癌症复发的风险，动态跟踪治疗的效果。检测的约180个基因范围包含：
+                        <ul>
+                            <li>靶向用药的靶点基因</li>
+                            <li>重要的癌症驱动基因</li>
+                            <li>癌症遗传易感基因</li>
+                            <li>化疗用药及药物代谢相关基因</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h1 class="blod">PRODUCT FEATURES</h1>
+        <h3 class="regular bottom">系列产品特色</h3>
+        <div class="row pro-features list-group">
+            <div class="col-md-6 list-group-item">
+                <img src="${ctx}/static/img/x1.png">
+                 <h4>取样无创伤</h4>
+                <p>可选择10ml外周血采样，便捷、无创</p>
+            </div>
+            <div class="col-md-6 list-group-item">
+                <img src="${ctx}/static/img/x4.png">
+                 <h4>适用人群广</h4>
+                <p>适用于所有健康人、所有癌症患者，为无法获取组织和细胞学标本患者带来希望</p>
+            </div>
+        </div>
+        <div class="row pro-features list-group">
+            <div class="col-md-6 list-group-item">
+                <img src="${ctx}/static/img/x2.png">
+                <h4>解决问题多</h4>
+                <p>
+                     检测常见癌症靶向用药和化疗药物密切相关的约180 个基因</p>
+            </div>
+            <div class="col-md-6 list-group-item">
+                <img src="${ctx}/static/img/x5.png">
+                <h4>测序深度高</h4>
+                <p>定向捕获基因目标区域，使用高通量测序平台，测序深度≥5000X</p>
+            </div>
+        </div>
+        <div class="row pro-features list-group">
+            <div class="col-md-6 list-group-item">
+                <img src="${ctx}/static/img/x3.png">
+                <h4>分析能力强</h4>
+                <p>—次性平行检测点突变、插入/缺失、结构变异、基因重排等多种变异类型</p>
+            </div>
+            <div class="col-md-6 list-group-item">
+                <img src="${ctx}/static/img/x6.png">
+                <h4>检测功能全</h4>
+                <p>除了个体化用药指导，还可以确定遗传风险，进行早期癌症筛查，复发转移监控</p>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h1 class="blod">PRODUCT CONTENT</h1>
+        <h3 class="regular">系列产品内容</h3>
+        <div class="pro-content">
+            <img src="http://images.firstdimension.cn/0508-180.png">
+        </div>
+    </div>
+    <div class="section img">
+        <h1 class="blod">REQUIREMENTS AND TRANSPORT</h1>
+        <h3 class="regular">样本要求及运输条件</h3>
+        <img class="visible-sm-block visible-xs-block" src="http://images.firstdimension.cn/requirements0324.png">
+       <table class="hidden-sm hidden-xs">
+            <thead>
+                <tr> <th>样本类型</th> <th>样本要求</th> <th>保存及运输条件</th> <th>备注</th> </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>外周血（液体活检）</td>
+                    <td>10ml全血，专用的Streck cell free DNA tube（Streck 无创管）收集, 采血后请立即轻柔颠倒10次使血液与管内成分混匀</td>
+                    <td>防压、防漏，常温运输</td>
+                    <td>建议自样本取出72h内送检</td>
+                </tr>
+                <tr>
+                    <td>石蜡切片</td>
+                    <td>切片厚度5~10μm（25mm x 25mm)，数量10-15张白片，保存时间1年内，如肿瘤组织切片面积较小，需增加切片数量；肿瘤细胞占比例> 50%</td>
+                    <td>2-8℃保存，常温运输</td>
+                    <td>建议医生增加1片进行HE染色，以确认肿瘤细胞的含量</td>
+                </tr>
+                <tr>
+                    <td>外周血(对照)</td>
+                    <td>EDTA抗凝管采集2ml静脉血，采血后请立即轻柔颠倒10次使血液与管内成分混匀</td>
+                    <td>约-80℃保存，干冰运输</td>
+                    <td>针对germline对照组</td>
+                </tr>
+                <tr>
+                    <td>手术新鲜(组织/穿刺)样本</td>
+                    <td>组织总量 > 50mg或穿刺组织不少于3针，样本离体后30min内置于液氮或-80℃冰箱，或者浸于10%的中性福尔马林中固定14-24小时后保存在无水乙醇中</td>
+                    <td>新鲜样本约-80℃保存，干冰运输；固定样本常温保存及运输</td>
+                    <td>固定时间超过24小时建议保存在无水乙醇中</td>
+                </tr>
+                <tr>
+                    <td>胸腔积液</td>
+                    <td>10ml胸腔积液，专用的Streck cell free DNA tube（Streck 无创管）收集, 采集后请立即轻柔颠倒10次使液体与管内成分混匀</td>
+                    <td>防压、防漏，常温运输</td>
+                    <td>建议自样本取出72h内送检</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div class="section img">
+        <h1 class="blod">PRODUCT SERVICE FLOW</h1>
+        <h3 class="regular">产品服务流程</h3>
+        <img src="http://images.firstdimension.cn/0518.png">
+    </div>
+    <div class="section img">
+        <h1 class="blod">TARGETED DRUGS LIST</h1>
+        <h3 class="regular">靶向药物列表</h3>
+        <img class="visible-sm-block visible-xs-block" src="http://images.firstdimension.cn/targeted-drugs170314.png">
+        
+        <table class="hidden-sm hidden-xs" style="margin-bottom: 0px;">
+            <thead>
+                <tr>
+                    <th colspan="7">靶向药物列表</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="green"> <td>吉非替尼</td> <td>厄洛替尼</td> <td>克唑替尼</td> <td>埃克替尼</td> <td>索拉非尼</td> <td>阿帕替尼</td> <td>达沙替尼</td> </tr>
+                <tr class="green"> <td>伊马替尼</td> <td>拉帕替尼</td> <td>舒尼替尼</td> <td>依维莫司</td> <td>尼洛替尼</td> <td>尼妥珠单抗</td> <td>贝伐珠单抗</td> </tr>
+                <tr class="green"> <td>曲妥珠单抗</td> <td>硼替佐米</td> <td>利妥昔单抗</td> <td></td> <td></td> <td></td> <td></td> </tr>
+                <tr class="yellow"> <td>阿雷替尼</td> <td>瑞格非尼</td> <td>凡德他尼</td> <td>帕博西尼</td> <td>色瑞替尼</td> <td>阿西替尼</td> <td>普纳替尼</td> </tr>
+                <tr class="yellow"> <td>索尼吉布    </td> <td>艾代拉里斯   </td> <td>阿法替尼    </td> <td>博舒替尼    </td> <td>卡博替尼    </td> <td>依鲁替尼    </td> <td>达拉菲尼</td> </tr>
+                <tr class="yellow"> <td>尼达尼布    </td> <td>乐伐替尼    </td> <td>曲美替尼    </td> <td>帕唑帕尼    </td> <td>威罗菲尼    </td> <td>奥拉帕尼    </td> <td>卡非佐米</td> </tr>
+                <tr class="yellow"> <td>替西罗莫司   </td> <td>维莫德吉    </td> <td>阿柏西普    </td> <td>鲁索利替尼   </td> <td>托法替尼    </td> <td>雷莫芦单抗   </td> <td>西妥昔单抗</td> </tr>
+                <tr class="yellow"> <td>帕尼单抗    </td> <td>帕妥珠单抗   </td> <td>纳武单抗    </td> <td>狄诺塞麦    </td> <td>埃沙佐米</td> <td>伊匹单抗 </td> <td>贝利司他</td> </tr>
+                <tr class="yellow"> <td>Ado-曲妥珠单抗emtansine</td> <td>阿仑单抗</td> <td>奥法木单抗</td> <td>帕比司他</td> <td>罗米地辛</td> <td>伏立诺他</td> <td>本妥昔单抗</td> </tr>
+                <tr class="yellow"> <td>埃罗妥珠单抗</td> <td>替伊莫单抗</td> <td>托西莫单抗</td> <td>Blinatumomab</td> <td>Obinutuzumab</td> <td>Daratumumab</td> <td>Osimertinib</td> </tr>
+                <tr class="yellow"> <td>Atezolizumab</td> <td>Pembrolizumab</td> <td>Necitumumab</td> <td>Cobimetinib</td> <td>Dinutuximab</td> <td>Osimertinib</td> <td></td> </tr>
+                <tr class="red"> <td>美迪替尼    </td> <td>BGJ398  </td> <td>AZD4547 </td> <td>Lucitanib   </td> <td>Neratinib   </td> <td>氟马替尼    </td> <td>CO-1686</td> </tr>
+                <tr class="red"> <td>AP26113 </td> <td>Foretinib   </td> <td>Niraparib   </td> <td>AZD5363 </td> <td>MK-2206 </td> <td>AZD2014 </td> <td>Pictilisib</td> </tr>
+                <tr class="red"> <td>Buparlisib  </td> <td>BYL719  </td> <td>Copanlisib  </td> <td>Binimetinib </td> <td>Momelotinib </td> <td>LEE011  </td> <td>MK-1775</td> </tr>
+                <tr class="red"> <td>安卓健 </td> <td>司美替尼    </td> <td>氟卓替尼</td> <td></td> <td></td> <td></td> <td></td> </tr>
+            </tbody>
+        </table>
+        <table class="hidden-sm hidden-xs" style="margin-top:0px;">
+            <thead>
+                <tr> <th colspan="7">激素类药物列表</th> </tr>
+            </thead>
+            <tbody>
+                <tr class="green"> <td>比卡鲁胺</td> <td>氟他胺</td> <td>来曲唑</td> <td>依西美坦</td> <td>阿那曲唑</td> <td>氟维司群</td> <td>磷酸雌莫司汀</td> </tr>
+                <tr class="green"> <td>阿比特龙</td> <td>戈舍瑞林</td> <td>曲普瑞林</td> <td>亮丙瑞林</td> <td>枸橼酸托瑞米芬</td> <td></td> <td></td> </tr>
+                <tr class="yellow"> <td>Nilutamide</td> <td>Enzalutamide</td> <td>他莫昔芬</td> <td>地盖瑞利</td> <td></td> <td></td> <td></td> </tr>
+            </tbody>
+        </table>
+        <div class="hidden-sm hidden-xs">备注：<span class="green">绿色为CFDA/FDA批准药物；</span><span class="yellow">黄色为FDA批准药物；</span><span class="red">红色为临床II/III期试验药物</span></div>
+    </div>
+    <div class="section img">
+        <h1 class="blod">CHEMOTHERAPEUTIC DRUGS AND GENE SUMMARY</h1>
+        <h3 class="regular">化疗药物列表及基因汇总表</h3>
+        <img class="visible-sm-block visible-xs-block" src="http://images.firstdimension.cn/chemotheapeutic.png">
+        <div class="row hidden-sm hidden-xs">
+            <div class="col-md-7">
+                 <table>
+                    <thead>
+                        <tr> <th colspan="4">化疗药物列表</th> </tr>
+                    </thead>
+                    <tbody>
+                        <tr> <td>雷替曲塞    </td> <td>甲氨蝶呤    </td> <td>噻替派 </td> <td>长春新碱</td> </tr>
+                        <tr> <td>培美曲塞    </td> <td>克拉屈滨    </td> <td>阿霉素 </td> <td>地塞米松</td> </tr>
+                        <tr> <td>硫鸟嘌呤    </td> <td>巯基嘌呤    </td> <td>表柔比星    </td> <td>紫杉醇</td> </tr>
+                        <tr> <td>阿糖胞苷    </td> <td>氟尿嘧啶    </td> <td>道诺霉素    </td> <td>伊立替康</td> </tr>
+                        <tr> <td>卡培他滨    </td> <td>吉西他滨    </td> <td>多西他赛    </td> <td>去甲氧基柔红霉素</td> </tr>
+                        <tr> <td>卡铂  </td> <td>环磷酰胺    </td> <td>依托泊苷    </td> <td>奥沙利铂</td> </tr>
+                        <tr> <td>顺铂          </td> <td></td> <td></td> <td></td> </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-5">
+                <table>
+                    <thead>
+                        <tr> <th colspan="2">基因汇总</th> </tr>
+                    </thead>
+                    <tbody>
+                        <tr> <td>基因类别    </td> <td>基因数目（个）</td> </tr>
+                        <tr> <td>遗传易感基因  </td> <td>79</td> </tr>
+                        <tr> <td>靶向用药相关基因    </td> <td>90</td> </tr>
+                        <tr> <td>重要癌症驱动基因    </td> <td>151</td> </tr>
+                        <tr> <td>化药及药物代谢相关基因 </td> <td>27</td> </tr>
+                        <tr> <td>合计* </td> <td>180</td> </tr>
+                    </tbody>
+                </table>
+                <div>备注：*部分基因重复</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%@ include file="common/bottom.jsp" %>
+<script>
+$(function() {
+    var data = $('.pro-nav>li.active').attr('data-name');
+    $('.introduce[data-name = ' + data + ']').css('display', 'block');
+    $('.pro-nav>li').click(function(e) {
+        $('.introduce[data-name = ' + data + ']').css('display', 'none');
+        $('.pro-nav>li.active').removeClass('active');
+        $(this).addClass('active');
+        data = $('.pro-nav>li.active').attr('data-name');
+        $('.introduce[data-name = ' + data + ']').css('display', 'block');
+    });
+});
+</script>
+</body>
+</html>

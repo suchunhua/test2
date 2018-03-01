@@ -1,0 +1,32 @@
+@charset 'utf-8';
+@import "../mixins/variables";
+
+.float-left{float: left;}
+.float-right{float: right;}
+
+.header-green-background{background-color:$header-green-background-color !important;}
+
+.white-background{background:#fff !important;}
+
+.box20px{height: 20px;}
+.box45px{height:45px;}
+.box125px{height: 125px;}
+.box50per{width:50% !important;}
+
+.clear{clear:both;}
+.clear-border{border:none !important;box-shadow: none !important;}
+.clear-position{position: static !important;}
+
+.grade-high{color: $grade-high-color;}
+.grade-low{color: $grade-low-color;}
+
+.text-overflow{overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis;}
+
+.opacity0{opacity: 0;}
+
+%dot{border-radius: 10px;width: 20px;height: 20px;display: inline-block;}
+.light-blue-dot{@extend %dot;background-color: #34d0ff;}
+.blue-dot{@extend %dot;background-color: #5d9bf0;}
+.yellow-dot{@extend %dot;background-color: #f8af46;}
+.red-dot{@extend %dot;background-color: #ff3e44;}
+

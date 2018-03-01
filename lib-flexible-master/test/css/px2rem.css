@@ -1,0 +1,45 @@
+/*
+Error: Invalid GBK character "\xE8"
+        on line 11 of px2rem.scss
+
+6: //    @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+7: //    @return px2em($px + 0px);  } @else if (unit($px) == em) { @return $px; } @return ($px / $base-font-size) * 1em; }
+8: @mixin px2rem($property, $px-values, $baseline-px: 16px, $support-for-ie: false) {
+9: 
+10: 
+11: $baseline-rem: $baseline-px / 1rem * 1;//Conver the baseline into rems 转换成rem基准值
+12: 
+13:  @if $support-for-ie { #{$property}: $px-values; }//Print the first line in pixel values 打印第一行的像素值
+14: 
+15:  @if type-of($px-values) == "number"{
+16:    #{$property}: $px-values / $baseline-rem;
+
+Backtrace:
+px2rem.scss:11
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/util.rb:1327:in `rescue in block in find_encoding_error'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/util.rb:1322:in `block in find_encoding_error'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/util.rb:1321:in `each'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/util.rb:1321:in `each_with_index'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/util.rb:1321:in `find_encoding_error'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/util.rb:930:in `check_sass_encoding'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/engine.rb:436:in `check_encoding!'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/engine.rb:392:in `_to_tree'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/exec/base.rb:52:in `parse'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/lib/sass/exec/base.rb:19:in `parse!'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/sass-3.4.24/bin/scss:13:in `<top (required)>'
+C:/Ruby192/bin/scss:19:in `load'
+C:/Ruby192/bin/scss:19:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid GBK character \"\xE8\"\A         on line 11 of px2rem.scss\A \A 6: //    @warn \"Assuming #{$px} to be in pixels, attempting to convert it into pixels for you\";\A 7: //    @return px2em($px + 0px);  } @else if (unit($px) == em) { @return $px; } @return ($px / $base-font-size) * 1em; }\A 8: @mixin px2rem($property, $px-values, $baseline-px: 16px, $support-for-ie: false) {\A 9: \A 10: \A 11: $baseline-rem: $baseline-px / 1rem * 1;//Conver the baseline into rems 转换成rem基准值\A 12: \A 13:  @if $support-for-ie { #{$property}: $px-values; }//Print the first line in pixel values 打印第一行的像素值\A 14: \A 15:  @if type-of($px-values) == \"number\"{\A 16:    #{$property}: $px-values / $baseline-rem;"; }

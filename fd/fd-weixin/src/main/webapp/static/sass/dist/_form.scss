@@ -1,0 +1,12 @@
+.form{width: 90%;margin: 0 auto;}
+
+.form-row { display: flex; margin: 20px auto; 
+	label { flex: 0 0 30%; line-height:40px;}
+	input { flex: 1; }
+	select { 
+		flex: 1; height: 40px; line-height: 40px; border: none; border-radius: 6px; padding: 10px; background-color: #e7e7e7; color:rgb(113, 113, 113);
+	}
+	textarea { flex: 1; border: none; background-color: #e7e7e7; border-radius: 6px; }
+}
+.error-msg{flex: 1; margin: 20px auto;color: #C23E4C; font-weight: bold;display:none;}
+.required{color: red;line-height: 40px;padding-right: 5px;}

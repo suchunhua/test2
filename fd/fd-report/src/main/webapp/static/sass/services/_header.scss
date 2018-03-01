@@ -1,0 +1,11 @@
+.login-head-bg{
+	background-color: #48494b;min-width: 1000px;
+	.login-head{height: 100px; overflow: hidden;@extend .wrap;
+		.logo{@extend .cursor-triangle;background: url("../img/logo/logo-transparent.png"); display: block; width: 118px; height: 78px; margin: 11px 0px 11px 48px;}
+	}
+}
+
+.top{
+	@extend .wrap;height: 114px;
+	img{float: left;margin: 18px 0px 18px 35px;}
+}

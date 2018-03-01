@@ -1,0 +1,15 @@
+.bg-title-container{
+	@extend .wrap;
+	@at-root .container-bg{background: url(../img/10031483_133215033311_2.png) no-repeat;overflow: hidden;min-width: 1000px;background-size: cover;}
+	.title{
+		float:left;background: url("../img/yuandian.png") no-repeat; height: 108px; margin: 44px 0px 0px 72px; padding-left: 65px;
+		.text-en{font-family: sans-serif;color:#585656;font-size:40px;display: block;margin-bottom: 10px;}
+		.text-ch{font-family: sans-serif;color:#585656;font-size: 35px;}
+	}
+	.user{
+		float: right;margin: 61.5px 0px;
+		img{float: left;margin-right: 10px;}
+		span{font-size: 14px; float: left; height: 14px; line-height: 14px; margin-top: 15px; margin-right: 48px;}
+		button{@extend .cursor-pen;color: #777575; border: 2px solid #777575; float: right; margin-top: 5px;}
+	}
+}

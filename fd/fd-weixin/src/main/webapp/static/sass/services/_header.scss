@@ -1,0 +1,52 @@
+@charset 'utf-8';
+@import "../dist/cssGraph";
+.bar{
+	height: 45px;padding:0px 10px;overflow: hidden;
+	.icon-fd-close{background-image: url(../img/icon/icon-fd-close.png); display: block; width: 14.5px; height: 14.5px; margin: 15px 0px; background-size: contain;}
+} 
+
+.search{
+	display: flex;background: -webkit-linear-gradient(left,#b81c2d,#f96f7e);
+	@at-root .red-bg{background: -webkit-linear-gradient(left,#b81c2d,#f96f7e);}
+	@at-root .search-box{
+		position: relative;@include attr-calc(width,"100% - 30px");
+		i.icon-fd-white-search{background: url(../img/icon/icon-fd-white-search.png) center center no-repeat; display: block; width: 25px; height: 21px; background-size: contain; position: absolute; top: 50%; margin-top: -11px; left: 4px;}
+		input.search-input{width: 100%; padding-left: 30px; background-color: transparent; height: 30px; border: 1px solid #fff; border-radius: 10px; margin-top: 6.5px;}
+	}
+}
+.menu{
+	position: fixed; overflow: initial; width: 100%; max-width: 640px;z-index: 4;background-color: #222;
+	%icon-fd-menu{z-index: 5;width: 20px; height: 18px; display: block; position: absolute; right: 10px; top: 12px;}
+	.icon-fd-menu-white{background: url(../img/icon/icon-fd-menu-white.png) center center no-repeat; background-size: contain;@extend %icon-fd-menu;}
+	.icon-fd-menu-black{background: url(../img/icon/icon-fd-menu-black.png) center center no-repeat;background-size: contain;@extend %icon-fd-menu;}
+	.icon-fd-black-search{background: url(../img/icon/icon-fd-black-search.png) center center no-repeat;background-size: contain;@extend %icon-fd-menu;}
+	@at-root .menu-ul{
+		position: absolute; right: 5px; top: 40px; padding: 0px 10px; background-color: #fff; box-shadow: 0px 0px 8px #cbcbcb;display: none;
+    	.triangle{
+			@include triangle-top();
+    	}
+		li{
+			border-bottom: 1px solid #d9d9d9;padding: 7px 0px;
+			&:last-child{border-bottom: none;}
+			.menu-link{
+				font-size: 2vw; text-align: right; display: block;line-height: 15px;
+				i{
+					display: block;float: left;margin-right: 3px;
+					&.icon-fd-appendix{background: url(../img/icon/icon-fd-appendix.png) center center no-repeat; background-size: contain; width: 12.5px; height: 15px;}
+					&.icon-fd-logo{background: url(../img/icon/icon-fd-logo.png) center center no-repeat; background-size: contain; width: 15px; height: 15px;}
+					&.icon-fd-horn{background: url(../img/icon/icon-fd-horn.png) center center no-repeat; background-size: contain; width: 17px; height: 18px;}
+				}
+				@media screen and (min-width:640px) {font-size: 1.5em; }
+			}
+		}
+	}
+}
+header.title{
+	@at-root .title-box{
+		height: 100%; overflow: hidden; text-align: center; line-height: 44px;@include media-font-size(19px,16px,18px,20px,25px);color:#fff;
+		%icon-fd-back{display: block; width: 11px; height: 19px; margin: 12.5px 0px; float: left;}
+		i.icon-fd-back-white{background: url(../img/icon/icon-fd-back-white.png) center center no-repeat; background-size: contain;@extend %icon-fd-back;}
+		i.icon-fd-back-black{background: url(../img/icon/icon-fd-back-black.png) center center no-repeat; background-size: contain;@extend %icon-fd-back;}
+		i.icon-fd-white-black{background: url(../img/icon/icon-fd-white-back.png) center center no-repeat; background-size: contain;@extend %icon-fd-back;width: 5%;}
+	}
+}

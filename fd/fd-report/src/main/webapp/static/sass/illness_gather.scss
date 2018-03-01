@@ -1,0 +1,53 @@
+/**
+* CONTENTS
+* login style
+*
+* SETTINGS
+* normalize ............................. normalize style storage file
+* reset ................................. reset style storage file
+* common ................................. reset style storage file
+* 
+* COMPONENTS
+* table ................................. table style storage file
+*
+* BUSINESS
+* head ................................. head style storage file
+* navbar ................................. navbar style storage file
+* jumbotron -------------------------- jumbotron style file
+*
+*/
+@import "mixins/normalize","mixins/reset","mixins/common","mixins/variables";
+@import "dist/table","dist/select";
+@import "services/header","services/navbar","services/footer","services/user","services/jumbotron","services/pages";
+
+.jumbotron .big-title{@include setBackgroundColorAndColor(#fff,$jumbotron-big-title-background-color-blue);}
+.re-wrap .big-title{@include setBackgroundColorAndColor(#fff,$jumbotron-big-title-background-color-blue);}
+
+.option{width: 100%;background-color: $jumbotron-big-title-background-color-blue;border-radius: 7px;padding-top: 7px;
+    padding-bottom: 7px;}
+.option select{background-color: transparent;border: 1px solid #fff;height: 30px;border-radius: 3px;margin-left: 15px;padding-left: 20px;padding-right: 9px;display: inline-block;vertical-align: top;margin-left: 25px;}
+
+.title-garden-table{width: 100%;margin-top: 3px;
+	tbody tr td[rowspan]{border-right:none;}
+}
+
+table input[type="submit"]{ color: #696969;background-color: rgb(243,245,246); border: 0px none; cursor: hand; font-family: sans-serif;; font-size: 15px; max-width:250px; text-decoration: underline;}
+
+.fanhui{margin-bottom:120px;margin-left: 9%;width: 91%;position: relative;
+	&:hover div{
+		display:block;
+	}
+}
+.fanhui img{position: absolute;right: 10px;top:20px;}
+.fanhui img:hover{opacity:0.7;}
+.fanhui div{position: absolute;right: 0;top:60px;z-index:1;display:none;color: #696969}
+
+.jumbotron-img{
+	.acticle{
+		overflow: hidden;
+		img{float: left;padding-right: 20px;width: 150px;}
+		div{line-height: 25px;}
+	}
+}
+
+.notes{width: 100%; background-color: #eeeeee; height: 43px; border-radius: 9px; margin-top: 2px; overflow: hidden; line-height: 43px; text-indent: 30px;}

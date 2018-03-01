@@ -1,0 +1,75 @@
+.table{
+	border-collapse: initial;table-layout: fixed;
+	thead{
+		tr{
+			th{}
+		}
+	}
+	tbody{
+		tr{
+			td{text-align: center;vertical-align: middle;}
+		}
+	}
+}
+
+/*.table2col{
+	@extend .table;
+	border: 1px solid #e1e1e1; margin: 20px 3%; width: 94%; border-radius: 15px; padding: 10px 3%;
+	thead{
+		tr{
+			th{border-bottom: 1px solid #e1e1e1; color: #23beb0; padding: 15px 0px;}
+		}
+	}
+	tbody{
+		tr{
+			td{text-align: center;padding: 15px 0px;vertical-align: middle;}
+		}
+	}
+}*/
+.table2col{
+	@extend .table; background-color: #fff; border-radius: 5px; width: 94%; margin: 3% auto; box-shadow: 2px 2px 8px #e1e1e1;text-align: left;line-height: 1.5;overflow: hidden;
+    thead{
+    	tr{
+    		th{
+    			color: #fff;background-color: #b81b2c; padding: 15px 0px 15px 10px;
+    			&:nth-of-type(1){width:50%;}
+    			&:nth-of-type(2){width:41%;}
+    			&:nth-of-type(3){width:9%;}
+    		}
+    	}
+    }
+    tbody{
+    	tr{
+    		td{
+    			padding:15px 0px 15px 10px;text-align: left;
+    			&:nth-of-type(1){width:50%;}
+    			&:nth-of-type(2){width:41%;color:#b81b2c;}
+    			&:nth-of-type(3){width:9%;padding:0px;}
+    		}
+    	}
+    }
+	
+}
+
+//3列的表
+.table3col{
+	@extend .table;border-top: 1px solid #dfdfdf;width: 94%;margin: 0 auto;padding: 20px 0px; background: #fff; border-radius: 5px;/*box-shadow: 2px 2px 8px #e1e1e1;*/
+	tbody{
+		tr{
+			td{padding: 10px 0px;}
+		}
+	}
+}
+.table3col1{
+	@extend .table; width: 92%; background-color: #fff; border-radius: 5px; box-shadow: 2px 2px 8px #e1e1e1; margin: 0 auto;text-align: left;
+	tbody{
+		tr{
+			td{
+				  padding: 15px 0px 15px 10px;text-align: left;
+				  &:nth-of-type(1){width:53%;}
+				  &:nth-of-type(2){width:38%;color:#b81b2c}
+				  &:nth-of-type(3){width:9%;}
+			}
+		}
+	}
+}

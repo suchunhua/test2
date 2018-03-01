@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fd.task.dao.TOriginMoveMaternalMapper" >
+  <resultMap id="BaseResultMap" type="com.fd.task.entity.TOriginMoveMaternal" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="collinfo_id" property="collinfoId" jdbcType="BIGINT" />
+    <result column="show_area" property="showArea" jdbcType="VARCHAR" />
+    <result	column="status" property="status" jdbcType="INTEGER"/>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, collinfo_id, show_area, status
+  </sql>
+  <insert id="saveListTOriginMoveMaternal" parameterType="java.util.List">
+  <foreach collection="tOriginMoveMaternalList" item="item" index="index" separator=";" close="" open="">
+  	insert into t_origin_move_maternal 
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="item.id != null" >
+        id,
+      </if>
+      <if test="item.collinfoId != null" >
+        collinfo_id,
+      </if>
+      <if test="item.showArea != null" >
+        show_area,
+      </if>
+      <if test="item.status != null" >
+        status,
+      </if>
+    </trim>
+    values
+      <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="item.id != null" >
+        #{item.id,jdbcType=BIGINT},
+      </if>
+      <if test="item.collinfoId != null" >
+        #{item.collinfoId,jdbcType=BIGINT},
+      </if>
+      <if test="item.showArea != null" >
+        #{item.showArea,jdbcType=VARCHAR},
+      </if>
+      <if test="item.status != null">
+      	#{item.status,jdbcType=INTEGER},
+      </if>
+      </trim>
+    </foreach>
+  </insert>
+  
+  <update id="updateListTOriginMoveMaternal">
+  	<foreach collection="tOriginMoveMaternalList" item="item" index="index" separator=";" close="" open="">
+  		update t_origin_move_maternal
+  		<set>
+	       show_area = #{item.showArea,jdbcType=VARCHAR}
+  		</set>
+  		where collinfo_id = #{item.collinfoId,jdbcType=BIGINT}
+  	</foreach>
+  </update>
+</mapper>

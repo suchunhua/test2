@@ -1,0 +1,12 @@
+.table_under {    
+	width: 100%; background-color: #eeeeee; height: 43px; border-radius: 9px; margin-top: 2px; overflow: hidden; 
+	&>.inner{
+		margin: auto; width: auto; text-align: center; margin-top: 6px;
+		&>div{
+			height: 30px;width: 30px;display: inline-block;vertical-align: top;margin-left: 15px;line-height: 30px;text-align: center;
+			&:hover{opacity: 0.7;cursor: pointer;}
+			&.chang{width: 40px;}
+			&.xd{border-bottom: 1px solid #D11234;}
+		}
+	}
+}

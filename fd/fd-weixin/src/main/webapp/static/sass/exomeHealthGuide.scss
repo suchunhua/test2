@@ -1,0 +1,62 @@
+/** * 健康管理模块 **/
+@charset 'utf-8';
+@import "exomeBase";
+.describe-title{
+	background-color: #fff;overflow: hidden;
+	&:nth-child(2n){margin-top: 3%;}
+	.title{padding: 5px 0px 5px 10px;box-sizing: content-box;}
+	.describe{
+		padding: 10px 0px; border-top: 1px solid #eeeeee; margin: 0 3%;
+		.summary{
+			padding: 10px 3%;font-size: 14px;line-height: 20px;color:rgba(0, 0, 0, 0.7);text-align: justify;
+			@media screen and (min-width:375px) and (max-width:413px) {font-size: 14px;line-height: 20px;}
+			@media screen and (min-width:414px) and (max-width:559px) {font-size: 16px;line-height: 22px; }
+			@media screen and (min-width:560px) and (max-width:639px) {font-size: 18px;line-height: 24px; }
+			@media screen and (min-width:640px) {font-size: 20px;line-height: 30px; }
+		}
+		.flex-ul{
+			display: box;display: -webkit-box;display: -ms-flexbox;
+			li{ 
+				-webkit-box-flex: 1; box-flex: 1; -ms-box-flex: 1; -ms-flex: 1; display: inline-block; padding:10px; border-radius: 25px; margin-bottom: 10px; cursor: pointer; border: 1px solid #b81b2c;
+				a{ 
+					width: 100%; height: 100%; color: #b81b2c; text-align: center; font-size: 14px;line-height: 20px;
+					@media screen and (min-width:375px) and (max-width:413px) {font-size: 14px;line-height: 20px;}
+					@media screen and (min-width:414px) and (max-width:559px) {font-size: 16px;line-height: 22px; }
+					@media screen and (min-width:560px) and (max-width:639px) {font-size: 18px;line-height: 24px; }
+					@media screen and (min-width:640px) {font-size: 20px;line-height: 30px; }
+				}
+			}
+		}
+	}
+}
+
+.top-title{border-bottom: 1px solid #dfdfdf; padding: 3% 4%;@include media-font-size(18px,20px,22px,24px,30px);}
+
+.index-list{
+	padding: 10px 3%; overflow: hidden; background-color: #fafafa;
+	li{
+		margin: 10px 0px;background-color: #fff;
+		p{
+			i{
+				display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 10px;
+				&.index0{background-color: #5cd8fe;}
+				&.index1{background-color: #7caef2;}
+				&.index2{background-color: #f8be6a;}
+				&.index3{background-color: #fe6468;}
+				&.index4{background-color: #4ecabf;}
+				&.index5{background-color: #f3b0cd;}
+				&.edit{background-image: url(../img/icon/icon-fd-edit.png); float: right; background-repeat: no-repeat; width: 20px; height: 20px; border-radius: inherit; margin-right: 0px;}
+			}
+			&.opt{border-bottom: 1px solid #f2f1f1; padding: 10px 5%; box-sizing: content-box; overflow: hidden;box-shadow: 0px 2px 7px #f6f6f6;}
+			&.show{padding: 10px 5%; font-size: 15px; line-height: 20px; color: #7b7b7b;}
+		}
+	}
+}
+
+.show-content{
+	padding: 10px 5%; font-size: 15px; line-height: 25px; color: #7b7b7b;text-align: justify;
+	@media screen and (min-width:375px) and (max-width:413px) {font-size: 15px;line-height: 25px;}
+	@media screen and (min-width:414px) and (max-width:559px) {font-size: 17px;line-height: 27px; }
+	@media screen and (min-width:560px) and (max-width:639px) {font-size: 19px;line-height: 29px; }
+	@media screen and (min-width:640px) {font-size: 21px;line-height: 35px; }
+}

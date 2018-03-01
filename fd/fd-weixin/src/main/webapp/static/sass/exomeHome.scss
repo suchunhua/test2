@@ -1,0 +1,26 @@
+/**
+* CONTENTS
+* exomeHome style
+*
+* SETTINGS
+* normalize ............................. normalize style storage file
+* reset ................................. reset style storage file
+* common ................................. reset style storage file
+* 
+* COMPONENTS
+*
+* BUSINESS
+*
+*/
+@import "exomeBase";
+
+.col{
+	width: 90%; background-image: url("../img/home-bg.png");background-origin:contain;background-repeat:round; margin: 0 auto; position: absolute; top: 27%; left: 0px; right: 0px; padding-bottom: 3%;
+    h1{font-weight: bold; padding: 8% 0;@include media-font-size(16px,18px,20px,22px,30px);text-align: center;}
+    .replace-li{
+    	span{ @include media-font-size(); }
+    }
+	@at-root .col-img{width:100%;}
+}
+
+

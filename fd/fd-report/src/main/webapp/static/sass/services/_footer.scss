@@ -1,0 +1,6 @@
+.footer{
+	@extend .wrap;overflow: hidden;
+	@at-root .footer-bg{min-width: 1000px;background-color: rgb(53,55,58);background: -webkit-linear-gradient(left top, #59595d , #383a3e); background: -o-linear-gradient(bottom right, #59595d , #383a3e); background: -moz-linear-gradient(bottom right, #59595d , #383a3e); background: linear-gradient(to bottom right, #59595d , #383a3e);}
+	@at-root .footer-p{color: #fff; float: left; margin: 10px 0px 10px 150px; font-size: 16px; line-height: 26px;}
+	@at-root .footer-img{float: right;width: 107px;margin: 15px 150px 15px 0px;}
+}

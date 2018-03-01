@@ -1,0 +1,5 @@
+com\fd\site\service\NewsService.class
+com\fd\site\dao\NewsMapper.class
+com\fd\site\controller\NewsController.class
+com\fd\site\entity\News.class
+com\fd\site\controller\IndexController.class

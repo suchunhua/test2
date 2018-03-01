@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fd.task.dao.CollInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.fd.task.entity.CollInfo" >
+    <id column="collInfoId" property="collinfoid" jdbcType="INTEGER" />
+    <result column="sendCom" property="sendcom" jdbcType="VARCHAR" />
+    <result column="sampType" property="samptype" jdbcType="VARCHAR" />
+    <result column="patient" property="patient" jdbcType="VARCHAR" />
+    <result column="FDsampCode" property="fdsampcode" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="VARCHAR" />
+    <result column="age" property="age" jdbcType="VARCHAR" />
+    <result column="testIll" property="testill" jdbcType="VARCHAR" />
+    <result column="stage" property="stage" jdbcType="VARCHAR" />
+    <result column="orig" property="orig" jdbcType="VARCHAR" />
+    <result column="family" property="family" jdbcType="VARCHAR" />
+    <result column="collMan" property="collman" jdbcType="VARCHAR" />
+    <result column="sendSamp" property="sendsamp" jdbcType="DATE" />
+    <result column="collTime" property="colltime" jdbcType="DATE" />
+    <result column="buildTime" property="buildtime" jdbcType="DATE" />
+    <result column="downTime" property="downtime" jdbcType="DATE" />
+    <result column="index_seq" property="indexSeq" jdbcType="VARCHAR" />
+    <result column="bookCode" property="bookcode" jdbcType="VARCHAR" />
+    <result column="testType" property="testtype" jdbcType="VARCHAR" />
+    <result column="delflag" property="delflag" jdbcType="VARCHAR" />
+    <result column="flat" property="flat" jdbcType="VARCHAR" />
+    <result column="testProInfoTestSkill" property="testproinfotestskill" jdbcType="VARCHAR" />
+    <result column="sendDet" property="senddet" jdbcType="VARCHAR" />
+    <result column="back" property="back" jdbcType="VARCHAR" />
+    <result column="doctor" property="doctor" jdbcType="VARCHAR" />
+    <result column="postname" property="postname" jdbcType="VARCHAR" />
+    <result column="posttele" property="posttele" jdbcType="VARCHAR" />
+    <result column="postemail" property="postemail" jdbcType="VARCHAR" />
+    <result column="cardId" property="cardid" jdbcType="VARCHAR" />
+    <result column="tele" property="tele" jdbcType="VARCHAR" />
+    <result column="parentOrig" property="parentorig" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="testDeep" property="testdeep" jdbcType="VARCHAR" />
+    <result column="charge" property="charge" jdbcType="VARCHAR" />
+    <result column="sampNum" property="sampnum" jdbcType="VARCHAR" />
+    <result column="reportIf" property="reportif" jdbcType="VARCHAR" />
+    <result column="reportLang" property="reportlang" jdbcType="VARCHAR" />
+    <result column="reportPerson" property="reportperson" jdbcType="VARCHAR" />
+    <result column="reportTime" property="reporttime" jdbcType="VARCHAR" />
+    <result column="reportCheck" property="reportcheck" jdbcType="VARCHAR" />
+    <result column="reportCheckTime" property="reportchecktime" jdbcType="VARCHAR" />
+    <result column="Ill" property="ill" jdbcType="VARCHAR" />
+    <result column="Illtem" property="illtem" jdbcType="VARCHAR" />
+    <result column="state3" property="state3" jdbcType="VARCHAR" />
+    <result column="bookCodeTemp" property="bookcodetemp" jdbcType="VARCHAR" />
+    <result column="sampTypeTemp" property="samptypetemp" jdbcType="VARCHAR" />
+    <result column="testTypeTemp" property="testtypetemp" jdbcType="VARCHAR" />
+    <result column="wareHousingManageKeyID" property="warehousingmanagekeyid" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.fd.task.entity.CollInfoWithBLOBs" extends="BaseResultMap" >
+    <result column="otherIll" property="otherill" jdbcType="LONGVARCHAR" />
+    <result column="judge" property="judge" jdbcType="LONGVARCHAR" />
+    <result column="otherexp" property="otherexp" jdbcType="LONGVARCHAR" />
+    <result column="sampCollTime" property="sampcolltime" jdbcType="LONGVARCHAR" />
+    <result column="linkId" property="linkid" jdbcType="LONGVARCHAR" />
+    <result column="remark" property="remark" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    collInfoId, sendCom, sampType, patient, FDsampCode, sex, age, testIll, stage, orig, 
+    family, collMan, sendSamp, collTime, buildTime, downTime, index_seq, bookCode, testType, 
+    delflag, flat, testProInfoTestSkill, sendDet, back, doctor, postname, 
+    posttele, postemail, cardId, tele, parentOrig, address, testDeep, charge, sampNum,reportIf, 
+    reportLang, reportPerson, reportTime, reportCheck, reportCheckTime, Ill, Illtem, 
+    state3, bookCodeTemp, sampTypeTemp, testTypeTemp, wareHousingManageKeyID
+  </sql>
+  <sql id="Blob_Column_List" >
+    otherIll, judge, otherexp, sampCollTime, linkId, remark
+  </sql>
+  <select id="listCollInfoWithBLOBsBySQLServer" resultType="java.util.Map">
+  	SELECT 
+  	whm.WareHousingManageKeyID AS warehousingmanagekeyid,
+	whm.SendSampleDate AS sendsamp,/*送样日期*/
+	whm.TransactorName AS collman, /*收样负责人*/
+	whm.ComeSampleDate AS colltime,
+	whm.SampleCollectionDate AS sampcolltime,
+	whm.EntrustUnitName AS sendcom,
+	whm.SendSampleDeptName AS senddet,
+	whm.SampleIsNoNeedReturn AS back,
+	whm.SampleSenderName AS postname,
+	whm.ProductAmount AS sampnum, /*样本数量  （支/片/块）： */
+	whm.SampleSenderTel AS posttele,
+	whm.CustomerTel AS tele,
+	whm.CustomerEmail AS postemail,/*电子邮箱*/
+	whm.CustomerName AS patient, /*客户姓名*/
+	whm.CustomerSex AS sex, /*性别*/
+	whm.CustomerAge AS age,/*年龄*/
+	whm.CustomerIdentityCard as cardid,/*身份证号码*/
+	whm.CustomerJiGuan AS parentorig,
+	whm.CustomerAddress AS address,
+	whm.CustomerFamilyDiseaseHistory AS family,
+	whm.CancerSubdivideName AS testill,
+	whm.CustomerTNMStaging AS stage,
+	whm.Remark AS otherexp,
+	whm.CustomerPersonalDiseaseHistory AS otherill,
+	whm.CustomerClinicalDiagnosis AS judge,
+	whm.SampleTwoLevelTypeName AS samptype,
+	whm.CheckOutNumber AS fdsampcode, /*FD样本编号*/
+	whm.CheckOutPlatformName AS flat,
+	whm.InputDate AS buildtime,
+	whm.SampleNumber AS bookcode,
+	whm.CustomerIsNoPrimarily AS orig,
+	whm.CheckOutTypeName AS testtype
+	FROM che_tWareHousingManage AS whm
+	LEFT JOIN che_tSendSampleDept AS ssd ON whm.SendSampleDeptKeyID = ssd.SendSampleDeptKeyID
+	LEFT JOIN che_tOrganization AS oz ON whm.OrganizationKeyID = oz.OrganizationKeyID
+  </select>
+  <select id="listCollInfoWithBLOBs" resultMap="ResultMapWithBLOBs">
+  	select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from collinfo
+    where wareHousingManageKeyID !=""
+  </select>
+  
+  <!-- 批量插入 -->
+  <insert id="insertCollInfoBatch" parameterType="java.util.List">
+  <foreach collection="collinfoList" item="item" index="index" separator=";" close="" open="">
+  	insert into collinfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="item.collinfoid != null" >
+        collInfoId,
+      </if>
+      <if test="item.sendcom != null" >
+        sendCom,
+      </if>
+      <if test="item.samptype != null" >
+        sampType,
+      </if>
+      <if test="item.patient != null" >
+        patient,
+      </if>
+      <if test="item.fdsampcode != null" >
+        FDsampCode,
+      </if>
+      <if test="item.sex != null" >
+        sex,
+      </if>
+      <if test="item.age != null" >
+        age,
+      </if>
+      <if test="item.testill != null" >
+        testIll,
+      </if>
+      <if test="item.stage != null" >
+        stage,
+      </if>
+      <if test="item.orig != null" >
+        orig,
+      </if>
+      <if test="item.family != null" >
+        family,
+      </if>
+      <if test="item.collman != null" >
+        collMan,
+      </if>
+      <if test="item.sendsamp != null" >
+        sendSamp,
+      </if>
+      <if test="item.colltime != null" >
+        collTime,
+      </if>
+      <if test="item.buildtime != null" >
+        buildTime,
+      </if>
+      <if test="item.downtime != null" >
+        downTime,
+      </if>
+      <if test="item.indexSeq != null" >
+        index_seq,
+      </if>
+      <if test="item.bookcode != null" >
+        bookCode,
+      </if>
+      <if test="item.testtype != null" >
+        testType,
+      </if>
+      <if test="item.delflag != null" >
+        delflag,
+      </if>
+      <if test="item.flat != null" >
+        flat,
+      </if>
+      <if test="item.testproinfotestskill != null" >
+        testProInfoTestSkill,
+      </if>
+      <if test="item.senddet != null" >
+        sendDet,
+      </if>
+      <if test="item.back != null" >
+        back,
+      </if>
+      <if test="item.doctor != null" >
+        doctor,
+      </if>
+      <if test="item.postname != null" >
+        postname,
+      </if>
+      <if test="item.posttele != null" >
+        posttele,
+      </if>
+      <if test="item.postemail != null" >
+        postemail,
+      </if>
+      <if test="item.cardid != null" >
+        cardId,
+      </if>
+      <if test="item.tele != null" >
+        tele,
+      </if>
+      <if test="item.parentorig != null" >
+        parentOrig,
+      </if>
+      <if test="item.address != null" >
+        address,
+      </if>
+      <if test="item.testdeep != null" >
+        testDeep,
+      </if>
+      <if test="item.charge != null" >
+        charge,
+      </if>
+      <if test="item.sampnum != null" >
+        sampNum,
+      </if>
+      <if test="item.reportif != null" >
+        reportIf,
+      </if>
+      <if test="item.reportlang != null" >
+        reportLang,
+      </if>
+      <if test="item.reportperson != null" >
+        reportPerson,
+      </if>
+      <if test="item.reporttime != null" >
+        reportTime,
+      </if>
+      <if test="item.reportcheck != null" >
+        reportCheck,
+      </if>
+      <if test="item.reportchecktime != null" >
+        reportCheckTime,
+      </if>
+      <if test="item.ill != null" >
+        Ill,
+      </if>
+      <if test="item.illtem != null" >
+        Illtem,
+      </if>
+      <if test="item.state3 != null" >
+        state3,
+      </if>
+      <if test="item.bookcodetemp != null" >
+        bookCodeTemp,
+      </if>
+      <if test="item.samptypetemp != null" >
+        sampTypeTemp,
+      </if>
+      <if test="item.testtypetemp != null" >
+        testTypeTemp,
+      </if>
+      <if test="item.warehousingmanagekeyid != null" >
+        wareHousingManageKeyID,
+      </if>
+      <if test="item.otherill != null" >
+        otherIll,
+      </if>
+      <if test="item.judge != null" >
+        judge,
+      </if>
+      <if test="item.otherexp != null" >
+        otherexp,
+      </if>
+      <if test="item.sampcolltime != null" >
+        sampCollTime,
+      </if>
+      <if test="item.linkid != null" >
+        linkId,
+      </if>
+      <if test="item.remark != null" >
+        remark,
+      </if>
+    </trim>
+    values
+      <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="item.collinfoid != null" >
+        #{item.collinfoid,jdbcType=INTEGER},
+      </if>
+      <if test="item.sendcom != null" >
+        #{item.sendcom,jdbcType=VARCHAR},
+      </if>
+      <if test="item.samptype != null" >
+        #{item.samptype,jdbcType=VARCHAR},
+      </if>
+      <if test="item.patient != null" >
+        #{item.patient,jdbcType=VARCHAR},
+      </if>
+      <if test="item.fdsampcode != null" >
+        #{item.fdsampcode,jdbcType=VARCHAR},
+      </if>
+      <if test="item.sex != null" >
+        #{item.sex,jdbcType=VARCHAR},
+      </if>
+      <if test="item.age != null" >
+        #{item.age,jdbcType=VARCHAR},
+      </if>
+      <if test="item.testill != null" >
+        #{item.testill,jdbcType=VARCHAR},
+      </if>
+      <if test="item.stage != null" >
+        #{item.stage,jdbcType=VARCHAR},
+      </if>
+      <if test="item.orig != null" >
+        #{item.orig,jdbcType=VARCHAR},
+      </if>
+      <if test="item.family != null" >
+        #{item.family,jdbcType=VARCHAR},
+      </if>
+      <if test="item.collman != null" >
+        #{item.collman,jdbcType=VARCHAR},
+      </if>
+      <if test="item.sendsamp != null" >
+        #{item.sendsamp,jdbcType=DATE},
+      </if>
+      <if test="item.colltime != null" >
+        #{item.colltime,jdbcType=DATE},
+      </if>
+      <if test="item.buildtime != null" >
+        #{item.buildtime,jdbcType=DATE},
+      </if>
+      <if test="item.downtime != null" >
+        #{item.downtime,jdbcType=DATE},
+      </if>
+      <if test="item.indexSeq != null" >
+        #{item.indexSeq,jdbcType=VARCHAR},
+      </if>
+      <if test="item.bookcode != null" >
+        #{item.bookcode,jdbcType=VARCHAR},
+      </if>
+      <if test="item.testtype != null" >
+        #{item.testtype,jdbcType=VARCHAR},
+      </if>
+      <if test="item.delflag != null" >
+        #{item.delflag,jdbcType=VARCHAR},
+      </if>
+      <if test="item.flat != null" >
+        #{item.flat,jdbcType=VARCHAR},
+      </if>
+      <if test="item.testproinfotestskill != null" >
+        #{item.testproinfotestskill,jdbcType=VARCHAR},
+      </if>
+      <if test="item.senddet != null" >
+        #{item.senddet,jdbcType=VARCHAR},
+      </if>
+      <if test="item.back != null" >
+        #{item.back,jdbcType=VARCHAR},
+      </if>
+      <if test="item.doctor != null" >
+        #{item.doctor,jdbcType=VARCHAR},
+      </if>
+      <if test="item.postname != null" >
+        #{item.postname,jdbcType=VARCHAR},
+      </if>
+      <if test="item.posttele != null" >
+        #{item.posttele,jdbcType=VARCHAR},
+      </if>
+      <if test="item.postemail != null" >
+        #{item.postemail,jdbcType=VARCHAR},
+      </if>
+      <if test="item.cardid != null" >
+        #{item.cardid,jdbcType=VARCHAR},
+      </if>
+      <if test="item.tele != null" >
+        #{item.tele,jdbcType=VARCHAR},
+      </if>
+      <if test="item.parentorig != null" >
+        #{item.parentorig,jdbcType=VARCHAR},
+      </if>
+      <if test="item.address != null" >
+        #{item.address,jdbcType=VARCHAR},
+      </if>
+      <if test="item.testdeep != null" >
+        #{item.testdeep,jdbcType=VARCHAR},
+      </if>
+      <if test="item.charge != null" >
+        #{item.charge,jdbcType=VARCHAR},
+      </if>
+      <if test="item.sampnum != null" >
+        #{item.sampnum,jdbcType=VARCHAR},
+      </if>
+      <if test="item.reportif != null" >
+        #{item.reportif,jdbcType=VARCHAR},
+      </if>
+      <if test="item.reportlang != null" >
+        #{item.reportlang,jdbcType=VARCHAR},
+      </if>
+      <if test="item.reportperson != null" >
+        #{item.reportperson,jdbcType=VARCHAR},
+      </if>
+      <if test="item.reporttime != null" >
+        #{item.reporttime,jdbcType=VARCHAR},
+      </if>
+      <if test="item.reportcheck != null" >
+        #{item.reportcheck,jdbcType=VARCHAR},
+      </if>
+      <if test="item.reportchecktime != null" >
+        #{item.reportchecktime,jdbcType=VARCHAR},
+      </if>
+      <if test="item.ill != null" >
+        #{item.ill,jdbcType=VARCHAR},
+      </if>
+      <if test="item.illtem != null" >
+        #{item.illtem,jdbcType=VARCHAR},
+      </if>
+      <if test="item.state3 != null" >
+        #{item.state3,jdbcType=VARCHAR},
+      </if>
+      <if test="item.bookcodetemp != null" >
+        #{item.bookcodetemp,jdbcType=VARCHAR},
+      </if>
+      <if test="item.samptypetemp != null" >
+        #{item.samptypetemp,jdbcType=VARCHAR},
+      </if>
+      <if test="item.testtypetemp != null" >
+        #{item.testtypetemp,jdbcType=VARCHAR},
+      </if>
+      <if test="item.warehousingmanagekeyid != null" >
+        #{item.warehousingmanagekeyid,jdbcType=VARCHAR},
+      </if>
+      <if test="item.otherill != null" >
+        #{item.otherill,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="item.judge != null" >
+        #{item.judge,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="item.otherexp != null" >
+        #{item.otherexp,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="item.sampcolltime != null" >
+        #{item.sampcolltime,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="item.linkid != null" >
+        #{item.linkid,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="item.remark != null" >
+        #{item.remark,jdbcType=LONGVARCHAR},
+      </if>
+      </trim>
+    </foreach>
+  </insert>
+  <update id="updateCollInfoBatch">  
+     <foreach close="" collection="collinfoList" index="index" item="item" open="" separator=";">  
+        update collinfo   
+        <set>
+          <if test="item.sendcom != null" >
+	        sendCom = #{item.sendcom,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.samptype != null" >
+	        sampType = #{item.samptype,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.patient != null" >
+	        patient = #{item.patient,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.fdsampcode != null" >
+	        FDsampCode = #{item.fdsampcode,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.sex != null" >
+	        sex = #{item.sex,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.age != null" >
+	        age = #{item.age,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.testill != null" >
+	        testIll = #{item.testill,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.stage != null" >
+	        stage = #{item.stage,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.orig != null" >
+	        orig = #{item.orig,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.family != null" >
+	        family = #{item.family,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.collman != null" >
+	        collMan = #{item.collman,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.sendsamp != null" >
+	        sendSamp = #{item.sendsamp,jdbcType=DATE},
+	      </if>
+	      <if test="item.colltime != null" >
+	        collTime = #{item.colltime,jdbcType=DATE},
+	      </if>
+	      <if test="item.buildtime != null" >
+	        buildTime = #{item.buildtime,jdbcType=DATE},
+	      </if>
+	      <if test="item.downtime != null" >
+	        downTime = #{item.downtime,jdbcType=DATE},
+	      </if>
+	      <if test="item.indexSeq != null" >
+	        index_seq = #{item.indexSeq,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.bookcode != null" >
+	        bookCode = #{item.bookcode,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.testtype != null" >
+	        testType = #{item.testtype,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.delflag != null" >
+	        delflag = #{item.delflag,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.flat != null" >
+	        flat = #{item.flat,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.testproinfotestskill != null" >
+	        testProInfoTestSkill = #{item.testproinfotestskill,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.senddet != null" >
+	        sendDet = #{item.senddet,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.back != null" >
+	        back = #{item.back,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.doctor != null" >
+	        doctor = #{item.doctor,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.postname != null" >
+	        postname = #{item.postname,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.posttele != null" >
+	        posttele = #{item.posttele,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.postemail != null" >
+	        postemail = #{item.postemail,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.cardid != null" >
+	        cardId = #{item.cardid,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.tele != null" >
+	        tele = #{item.tele,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.parentorig != null" >
+	        parentOrig = #{item.parentorig,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.address != null" >
+	        address = #{item.address,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.testdeep != null" >
+	        testDeep = #{item.testdeep,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.charge != null" >
+	        charge = #{item.charge,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.sampnum != null" >
+	        sampNum = #{item.sampnum,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.reportif != null" >
+	        reportIf = #{item.reportif,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.reportlang != null" >
+	        reportLang = #{item.reportlang,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.reportperson != null" >
+	        reportPerson = #{item.reportperson,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.reporttime != null" >
+	        reportTime = #{item.reporttime,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.reportcheck != null" >
+	        reportCheck = #{item.reportcheck,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.reportchecktime != null" >
+	        reportCheckTime = #{item.reportchecktime,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.ill != null" >
+	        Ill = #{item.ill,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.illtem != null" >
+	        Illtem = #{item.illtem,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.state3 != null" >
+	        state3 = #{item.state3,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.bookcodetemp != null" >
+	        bookCodeTemp = #{item.bookcodetemp,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.samptypetemp != null" >
+	        sampTypeTemp = #{item.samptypetemp,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.testtypetemp != null" >
+	        testTypeTemp = #{item.testtypetemp,jdbcType=VARCHAR},
+	      </if>
+	      <if test="item.otherill != null" >
+	        otherIll = #{item.otherill,jdbcType=LONGVARCHAR},
+	      </if>
+	      <if test="item.judge != null" >
+	        judge = #{item.judge,jdbcType=LONGVARCHAR},
+	      </if>
+	      <if test="item.otherexp != null" >
+	        otherexp = #{item.otherexp,jdbcType=LONGVARCHAR},
+	      </if>
+	      <if test="item.sampcolltime != null" >
+	        sampCollTime = #{item.sampcolltime,jdbcType=LONGVARCHAR},
+	      </if>
+	      <if test="item.linkid != null" >
+	        linkId = #{item.linkid,jdbcType=LONGVARCHAR},
+	      </if>
+	      <if test="item.remark != null" >
+	        remark = #{item.remark,jdbcType=LONGVARCHAR},
+	      </if>
+        </set>  
+        where wareHousingManageKeyID = #{item.warehousingmanagekeyid,jdbcType=BIGINT}
+    </foreach>  
+  </update>
+</mapper>

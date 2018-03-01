@@ -1,0 +1,44 @@
+/**
+* CONTENTS
+* exomeHome style
+*
+* SETTINGS
+* normalize ............................. normalize style storage file
+* reset ................................. reset style storage file
+* common ................................. reset style storage file
+* 
+* COMPONENTS
+*
+* BUSINESS
+*
+*/
+@import "exomeBase";
+
+.article{
+	padding: 5% 3%;overflow: hidden;text-indent: 2em;text-align: justify;
+	.article-title{color: #b71b2c;@include media-font-size(18px,20px,22px,24px,30px);}
+	p{margin-top: 10%;height: auto !important;@include media-font-size();line-height:1.5;color: #666;}
+	.article-watermark{float: right;margin-top: 15px;width: 45%;}
+}
+
+.bookmark{
+	width: 100%;text-align: left;
+	li{
+		padding: 3% 5%;@include media-font-size(12px,14px,16px,18px,20px);    
+		&.active{color: #bd2b39;}
+	}
+}
+.notebook{
+	margin:0px 4%;box-shadow: 0px 0px 10px #c8c8c8;
+	.notebook-row{
+		background-color: #fff;
+		li{
+			border-bottom:1px dashed #eeeeee;line-height: 1.5; 
+			span{
+				&:nth-child(2n+1){@include media-font-size(16px,18px,20px,22px,30px); }
+				&:nth-child(2n){font-weight: bold;@include media-font-size();}
+			}
+			p{ line-height: 1.5; text-align: justify;color: #999;@include media-font-size(12px,14px,16px,18px,20px); }
+		}
+	}
+}

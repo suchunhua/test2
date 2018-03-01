@@ -1,0 +1,7 @@
+.user{
+	float: right; margin: 34.5px 45px 34.5px 0px; height: 30px;
+	@at-root .user-name{
+		background: url(../img/touxiang.png) no-repeat; height: 29px; padding-left: 37px; display: block; float: left; vertical-align: bottom; line-height: 41px; margin-right: 20px;
+	}
+	a{@extend .cursor-pen;border: 2px solid #777575;display: inline-block;padding: 2px 7px;margin-top: 6px;border-radius: 5px;}
+}

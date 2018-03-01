@@ -1,0 +1,13 @@
+/**
+* 图表模块
+*
+*/
+@import "exomeBase";
+
+//柱状图
+.histogram{
+	margin-top: 45px;
+	&>div{min-width: 300px;max-width: 640px;width:100%;}
+	.btn{width: 80%; margin: 20px auto 0; display: block;}
+	.highcharts-legend{display:none;}
+}

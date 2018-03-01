@@ -1,0 +1,34 @@
+@charset 'utf-8';
+@import "../mixins/common";
+.popup-box{
+	display: none;
+	.popup-shade{
+		z-index: 19891045; background-color: #000; opacity: 0.5; filter: alpha(opacity=50); top: 0; left: 0; width: 100%; height: 100%; _height: expression(document.body.offsetHeight+"px"); position: fixed; _position: absolute; pointer-events: auto;min-width: 300px; max-width: 640px; right: 0px; margin: 0 auto;
+	}
+	@at-root .popup-content-box{
+		position: fixed;z-index: 19891046; top: 10%; left: 0px; right: 0px; margin: 0 auto; border-radius: 10px;max-width: 600px; 
+		.popup-content{   
+			background-color: #fff;overflow-y: auto;
+		}
+	}
+}
+//展示一个页面并且关闭按钮在底部
+.pageBottom{
+	@extend .popup-content-box;height: 80%;width: 80%;overflow: hidden;
+	.popup-content{   
+		@include attr-calc("height","100% - 45px");
+	}
+	.popup-close{    
+		position: absolute; bottom: 0px;  height: 45px; width: 100%;text-align: center;
+		i.icon-fd-white-close{ position: absolute; top: 2px; text-align: center; display: inline-block; width: 30px; height: 30px; right: 0px; background-image: url(../img/icon/icon-fd-close.png); background-repeat: no-repeat; background-position: center center; background-size: 60% 60%; }
+	}
+}
+//展示一块内容并且关闭按钮在右上方
+.contentRighttop{
+	@extend .popup-content-box;width: 93%;height: 80%;
+	.popup-content{   
+		border-radius: 5px;max-height: 100%;
+		.true{color: #b81b2c; text-align: center; border-top: 1px solid #f3f3f3; width: 100%; padding: 4% 0;@include media-font-size();}
+	}  
+	i.icon-fd-white-close{ position: absolute; top: 2px; text-align: center; display: inline-block; width: 30px; height: 30px; right: 0px; background-image: url(../img/icon/icon-fd-close.png); background-repeat: no-repeat; background-position: center center; background-size: 60% 60%; }
+}

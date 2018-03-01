@@ -1,0 +1,26 @@
+@charset 'utf-8';
+@import "../dist/cssGraph";
+@import "../mixins/common";
+.footer-tab	{
+	position: fixed; bottom: 0px; width: 100%; max-width: 640px; border-top: 1px solid #dfdfdf; background-color: #fff; z-index: 5; height: 65px;
+	.back-top{position: absolute; @include attr-calc("bottom","100% + 35px");right: 5%; width: 35px; height: 35px; z-index: 2000; display: none; transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);}
+	.tab{
+		height: 100%;overflow: hidden;
+		li{
+			float: left; position: relative; @include attr-calc(width,"100% / 3");text-align: center;height: 100%;
+			a{
+				display: block;padding: 3% 0px;
+				img{width: 23px; margin: 3px 0px; text-align: center;}
+				span{display: block;color: #999;}
+			}
+			&:nth-child(2){
+				a{padding: 16% 0px;}
+			}
+			&.active{
+				a{
+					span{color:#B81B2C;}
+				}
+			}
+		}
+	}
+}

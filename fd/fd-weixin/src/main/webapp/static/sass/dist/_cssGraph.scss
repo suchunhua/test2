@@ -1,0 +1,16 @@
+@charset 'utf-8';
+@import "../mixins/common";
+@mixin triangle-top($triangle-color:#fff,$top:-17px,$right:8px){
+	width: 0; height: 0; border-top: 7px solid transparent; border-right: 7px solid transparent; border-bottom: 10px solid $triangle-color; border-left: 7px solid transparent; position: absolute; @include attr-calc(top,$top); display: block; @include attr-calc(right,$right);
+}
+.triangle-bottom{
+	width: 0; height: 0; border-top: 7px solid #fff; border-right: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 7px solid transparent; position: absolute; display: block; bottom: -13px; @include attr-calc(left,"50% - 7px"); z-index: 2;
+}
+.triangle-up{ 
+	width:0;height:0; border-left: 7px solid transparent; border-right: 7px solid transparent; border-top: 7px solid #bbbbbb;display:block;
+}
+
+.rectangle{width: 8%; height: 10px;}
+.blue-low{@extend .rectangle;background: #33a0ff;}
+.green-normal{@extend .rectangle;background: #0ad009;}
+.red-high{@extend .rectangle;background: #ff4958;}

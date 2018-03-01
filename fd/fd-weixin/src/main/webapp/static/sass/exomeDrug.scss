@@ -1,0 +1,47 @@
+@charset 'utf-8';
+@import "exomeBase";
+@import "dist/span";
+
+.sidebar{
+	@include attr-calc(height,"100% - 110px");@include media-font-size();
+	li{text-align: center;cursor: pointer;padding:3%;}
+}
+
+.words{
+	@include media-font-size();width: 94%; margin: 5px auto;background: #fff;border-radius: 5px;overflow-y: auto;@include attr-calc(height,"100% - 110px");box-shadow: 2px 2px 8px #e1e1e1;
+	li{
+		line-height: 30px; color: #5b5b5b; cursor: pointer; padding:3%; border-bottom: 1px solid #f3f3f3;
+		a{
+			width: 100%;display: block;
+			i{
+				display: inline-block; vertical-align: middle;
+				&:nth-child(1){@include attr-calc(width,"100% - 17px");}
+			}
+			i.go{display: inline-block; background: url(../img/icon/icon-fd-arrow-right.png) no-repeat; background-position: center center; width: 17px; height: 14px;}
+		}
+		&:last-child{border-bottom:none;}
+	}	
+}
+
+.col-bg{
+	overflow: hidden;position: relative;
+	.like-banner{padding: 9% 33% 15%;background-color: #fef9d1;}
+}
+
+ul.dot-cont{
+	width: 94%;padding: 5% 0;border-radius: 5px; background-color: #fff; box-shadow: 2px 2px 8px #e1e1e1; position: absolute; top: 24%; right: 3%;@include media-font-size();
+	li{
+		overflow: hidden;margin-bottom: 10px;
+		span{
+			display: inline-block;vertical-align: top; line-height: 1.5;
+			&.red-line{border-left: 4px solid #b81b2c;}
+			&.blue-line{border-left: 4px solid #5398d3;}
+			&.green-line{border-left: 4px solid #0acf0d;}
+			&.purple-line{border-left: 4px solid #9064ff;}
+			&.purple-line+span{@include media-font-size(12px,14px,16px,18px,20px);}
+			&.black{@extend %span.black;}
+			&.block{width: 60%; text-align: justify; margin-right: 3%;}
+			&:nth-child(1){width:37%; padding-left: 4%;}
+		}
+	}
+}

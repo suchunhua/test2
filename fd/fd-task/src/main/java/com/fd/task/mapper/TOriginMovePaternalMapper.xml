@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fd.task.dao.TOriginMovePaternalMapper" >
+  <resultMap id="BaseResultMap" type="com.fd.task.entity.TOriginMovePaternal" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="collinfo_id" property="collinfoId" jdbcType="BIGINT" />
+    <result column="origin_type" property="originType" jdbcType="BIT" />
+    <result column="line_title" property="lineTitle" jdbcType="VARCHAR" />
+    <result column="line_subtitle" property="lineSubtitle" jdbcType="VARCHAR" />
+    <result column="line_description" property="lineDescription" jdbcType="VARCHAR" />
+    <result column="line_img1" property="lineImg1" jdbcType="VARCHAR" />
+    <result column="line_img2" property="lineImg2" jdbcType="VARCHAR" />
+    <result column="line_img3" property="lineImg3" jdbcType="VARCHAR" />
+    <result column="update_name" property="updateName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, collinfo_id, origin_type,  
+    line_title, line_subtitle, line_description, line_img1, line_img2, line_img3, update_name
+  </sql>
+  
+  <insert id="saveListTOriginMovePaternal" parameterType="java.util.List">
+  <foreach collection="tOriginMovePaternalList" item="item" index="index" separator=";" close="" open="">
+  	insert into t_origin_move_paternal 
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="item.id != null" >
+        id,
+      </if>
+      <if test="item.collinfoId != null" >
+        collinfo_id,
+      </if>
+      <if test="item.originType != null" >
+        origin_type,
+      </if>
+      <if test="item.lineTitle != null" >
+        line_title,
+      </if>
+      <if test="item.lineSubtitle != null" >
+        line_subtitle,
+      </if>
+      <if test="item.lineDescription != null" >
+        line_description,
+      </if>
+      <if test="item.lineImg1 != null" >
+        line_img1,
+      </if>
+      <if test="item.lineImg2 != null" >
+        line_img2,
+      </if>
+      <if test="item.lineImg3 != null" >
+        line_img3,
+      </if>
+      <if test="item.updateName != null" >
+        update_name,
+      </if>
+    </trim>
+    values
+      <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="item.id != null" >
+        #{item.id,jdbcType=BIGINT},
+      </if>
+      <if test="item.collinfoId != null" >
+        #{item.collinfoId,jdbcType=BIGINT},
+      </if>
+      <if test="item.originType != null" >
+        #{item.originType,jdbcType=BIT},
+      </if>
+      <if test="item.lineTitle != null" >
+        #{item.lineTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="item.lineSubtitle != null" >
+        #{item.lineSubtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="item.lineDescription != null" >
+        #{item.lineDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="item.lineImg1 != null" >
+        #{item.lineImg1,jdbcType=VARCHAR},
+      </if>
+      <if test="item.lineImg2 != null" >
+        #{item.lineImg2,jdbcType=VARCHAR},
+      </if>
+      <if test="item.lineImg3 != null" >
+        #{item.lineImg3,jdbcType=VARCHAR},
+      </if>
+      <if test="item.updateName != null" >
+        #{item.updateName,jdbcType=VARCHAR},
+      </if>
+      </trim>
+    </foreach>
+  </insert>
+  
+  <update id="updateListTOriginMovePaternal">
+  	<foreach collection="tOriginMovePaternalList" item="item" index="index" separator=";" close="" open="">
+  		update t_origin_move_paternal
+  		<set>
+  			line_description = #{item.lineDescription,jdbcType=VARCHAR}
+  		</set>
+  		where collinfo_id = #{item.collinfoId,jdbcType=BIGINT}
+  	</foreach>
+  </update>
+</mapper>

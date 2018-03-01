@@ -1,0 +1,20 @@
+@mixin setBackgroundColorAndColor($color:#323232,$background-color:#8ACBA5){
+	color:$color;
+	background-color: $background-color;
+}
+
+.jumbotron{
+	@extend .wrap;max-width:1060px;background-color: #eeeeee;border-radius: 10px;box-shadow: 5px 5px 5px rgba(139, 134, 134, 0.75);margin-top: 75px;position: relative;margin-bottom: 100px;
+	.big-title{@include setBackgroundColorAndColor();font-size: 28px;text-align: center;height: 55px;line-height: 55px;border-radius: 4px;box-shadow: 5px 5px 5px rgba(139, 134, 134, 0.75);position: absolute;top: -33px;margin: 0px;padding: 0px 10px;}
+	.big-font{font-weight: bold;font-size: 150%;padding: 0px 10px;}
+	.subtitle{font-family: sans-serif;font-size: 20px;position: absolute;top: -12px;left: 230px;font-weight: bold;color: #323232;}
+	.acticle{ position: relative;padding: 40px 20px 20px; 
+		p{text-indent: 2em;z-index: 4;position: relative;line-height: 25px;}
+	}
+}
+
+.re-wrap{
+	@extend .wrap;max-width:1060px;
+	.big-title{color: #323232;font-size: 28px;font-family: sans-serif;display:inline-block;padding:0px 10px;text-align: center;background-color: #8ACBA5;height: 55px;line-height: 55px;border-radius: 4px;box-shadow: 5px 5px 5px rgba(139, 134, 134, 0.75);margin-bottom: 37px;}
+	.big-font{font-weight: bold;font-size: 150%;}
+}

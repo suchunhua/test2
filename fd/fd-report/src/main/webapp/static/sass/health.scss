@@ -1,0 +1,29 @@
+/**
+* CONTENTS
+* login style
+*
+* SETTINGS
+* 
+* COMPONENTS
+*
+* BUSINESS
+* jumbotron -------------------------- jumbotron style file
+*
+*/
+@import "exomeBase";
+@import "services/jumbotron";
+.jumbotron{
+	background-color: #EEEEEE;
+	.big-title{@include setBackgroundColorAndColor(#fff,$jumbotron-big-title-background-color-red);}
+}
+.re-wrap{
+	.big-title{@include setBackgroundColorAndColor(#fff,$jumbotron-big-title-background-color-red);
+		strong{color: #fff;}
+	}
+}
+
+.content{
+	@extend .wrap;min-width: 958px; overflow: hidden; max-width: 1018px; margin-bottom: 50px; border: 1px solid #c2c4c7; padding: 20px; min-height: 500px; margin-top: 43px;
+	.title{display: inline-block; width: 100%; border-bottom: 1px solid #d10e35; padding-bottom: 5px;}
+	.item{line-height:25px;height: 472px;overflow-y: auto;}
+}

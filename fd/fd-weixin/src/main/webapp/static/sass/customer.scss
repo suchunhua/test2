@@ -1,0 +1,74 @@
+/**
+* CONTENTS
+* exomeHome style
+*
+* SETTINGS
+* normalize ............................. normalize style storage file
+* reset ................................. reset style storage file
+* common ................................. reset style storage file
+* 
+* COMPONENTS
+*
+* BUSINESS
+*
+*/
+@import "exomeBase";
+@import "dist/button","dist/form","dist/input";
+
+.show-target{
+	margin-top:0px;
+	li{background-color: #fff; padding: 10px 3%; border-bottom: 1px solid #dfdfdf; line-height: 30px;@include media-font-size();}
+}
+.topCss{
+	background-color: #fff;padding-top:20px;margin-top:0px;
+	li{padding: 10px 3%;margin-bottom: 0px;}
+}
+.col{
+	width: 85%; background-color: #fff; margin: 0 auto; border-radius: 5px; position: absolute; top: 10%; left: 0px; right: 0px; height: 85%; text-align: center; box-shadow: 0px 3px 5px rgba(53, 52, 52, 0.2);
+	@at-root .col-bg{overflow: hidden;position: relative;}
+	@at-root .col-img{width:100%;}
+	.header-img{width: 25%;margin: 3% 0px 1%;}
+	span{display: block;@include media-line-size-height();}
+}
+
+
+.progress-loop-box{
+	position: relative;
+	@at-root .progress-loop{width: 100%;padding: 14% 5% 7%;}
+	span{position: absolute; left: 0px;right: 0px;text-align: center; top: 53%; color: #5a5a5a;@include media-font-size();}
+	@at-root .opt{
+		    background-color: #fff; width: 100%; position: absolute; box-shadow: 0px 0px 10px #e1e1e1; bottom: 0px; padding: 3% 0px;
+		a{
+			@extend .btn-red;box-shadow: none;width: 94%; margin: 0px auto;@include media-font-size();
+			&.delete{margin-bottom: 3%;}
+			&.edit{background-color:#09bb07;}
+			&.order{}
+		}
+	}
+}
+
+.layout{@extend .btn-red;width: 45%;margin: 32px auto 0;@include media-font-size();}
+
+.col-center-btn{
+	@include media-font-size();border-top:1px dashed #ededed;text-align: center;margin-top: 3%;
+	li{@include attr-calc(width,"50% - 8px");display: inline-block;
+		a{width: 100%;display: block;margin: 3% 0px;}
+		img{width: 17%;vertical-align: middle;margin-right: 6%;}
+		&:nth-child(1){border-right: 1px dashed #ededed;}
+	}
+}
+
+.editCustomer{
+	li{
+		a{padding:10px 0px;color: #7f7f7f;}
+	}
+}
+
+.big-icon{margin: 20px auto;display: block;}
+.subtitle{display: block;text-align: center;}
+.change{color: #fff; border-radius: 5px; display: block; box-shadow: 1px 1px 3px #ffa5b1; width: 94%; margin: 20px auto 0;background-color: #b81b2c;text-align: center;padding: 5% 0px;@include media-font-size();}
+input.changes{width: 100%;border: none;padding: 15px 3%;@include media-font-size();}
+
+.cancel{@extend .change;background-color: #fff;color: #333;box-shadow: 1px 1px 3px #e1e1e1;@include media-font-size(16px,18px,20px,22px,30px);}
+.complete{@extend .change;@include media-font-size(16px,18px,20px,22px,30px);}
+

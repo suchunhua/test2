@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fd.task.dao.OOriginMoveMapper" >
+  <resultMap id="BaseResultMap" type="com.fd.task.entity.OOriginMove" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="collInfoId" property="collinfoid" jdbcType="BIGINT" />
+    <result column="origin_type" property="originType" jdbcType="CHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.fd.task.entity.OOriginMove" extends="BaseResultMap" >
+    <result column="paths" property="paths" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, collInfoId, origin_type, status
+  </sql>
+  <sql id="Blob_Column_List" >
+    paths
+  </sql>
+  <select id="listNeedImportOOriginMove" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from o_origin_move
+    where status != 0
+  </select>
+  <update id="saveArrayOOriginMove" parameterType="java.util.ArrayList" >
+    update o_origin_move
+    set 
+      status = 0
+    where id in 
+    <foreach collection="oOriginMoveIds" item="item" index="index" separator="," open="(" close=")">
+     #{item,jdbcType=BIGINT}
+    </foreach>
+  </update>
+  <select id="countOOriginMoveChange" resultType="java.lang.Integer" parameterType="java.lang.Long" >
+    select count(id) from o_origin_move WHERE `status`  != 0;
+  </select>
+</mapper>

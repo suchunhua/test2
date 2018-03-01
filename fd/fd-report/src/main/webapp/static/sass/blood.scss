@@ -1,0 +1,74 @@
+/**
+* CONTENTS
+* abo style
+*
+* SETTINGS
+* 
+* COMPONENTS
+* button -------------------------- button style file
+*
+* BUSINESS
+* jumbotron -------------------------- jumbotron style file
+*
+*/
+@import "exomeBase";
+@import "services/jumbotron";
+@import "dist/button";
+.jumbotron{
+	.big-title{color: #fff;background-color: #18a299;}
+	.acticle{padding: 65px 55px;
+		p{text-indent: 0em;}
+	}
+}
+
+.title-btn{font-size: 16px; font-weight: normal; border: 1px solid #CACACA; height: 53px; background-color: #eee;}
+.title-btn-active{background-color: #18a299; color: #fff; font-size: 28px; font-weight: bold; border: none;}
+
+.two-dimen-title{margin: 45px 0px 15px 0px;font-size: 24px;}
+.two-dimen{  
+	border-top: 4px solid #18a299;width: 100%;
+	thead{
+		tr{
+			th{height: 45px;line-height: 45px;border-bottom: 1px solid #c2c4c7;}
+		}
+	}
+	tbody{
+		tr{
+			border-bottom: 1px solid #c2c4c7;height: 45px;line-height: 45px;
+			td{
+				text-align:center;
+				&:nth-child(5n+1){text-align:left;}
+			}
+		}
+	}
+}
+.clear-two-dimen{
+	margin-top: 40px;
+	tbody{
+		tr{
+			td{
+				&:nth-child(n){text-align:center;}
+			}
+		}
+	}
+}
+.remarks{font-size: 12px;color: #323232;margin-top: 9px;}
+
+.re-wrap{margin-bottom: 45px;}
+
+.main-title{color: #18a299; font-size: 28px; margin: 80px 0px 40px 0px; line-height: 28px; height: 28px;}
+.sub-title{color: #18a299; font-size: 18px; margin: 35px 0px 10px 0px; line-height: 18px; height: 18px;}
+.qa{margin-bottom: 45px;
+	li{      
+		border-top: 1px solid #c2c4c7; border-bottom: 1px solid #c2c4c7; margin-bottom: 1px; padding: 15px 25px;
+    	p{
+    		margin: 15px 0px;
+			span{    
+				&.q{color: #18a299; width: 5%; float: left;}
+				&.cont{width: 80%;display: inline-block;}
+				&.bold{font-weight:bold;}
+				&.line{line-height: 25px;}
+			}
+    	}
+	}
+}

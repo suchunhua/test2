@@ -1,0 +1,24 @@
+/**
+* CONTENTS
+* exomeHome style
+*
+* SETTINGS
+* normalize ............................. normalize style storage file
+* reset ................................. reset style storage file
+* common ................................. reset style storage file
+* 
+* COMPONENTS
+*
+* BUSINESS
+*
+*/
+@import "exomeBase";
+
+.img-box{margin-bottom:0px;}
+.border-red-tab{
+	padding: 3% 0px 2%;
+	li{@include attr-calc(width,"100% / 3");}
+}
+
+
+

@@ -1,0 +1,42 @@
+/**
+* CONTENTS
+* login style
+*
+* SETTINGS
+* normalize ............................. normalize style storage file
+* reset ................................. reset style storage file
+* common ................................. reset style storage file
+* 
+* COMPONENTS
+* table ................................. table style storage file
+*
+* BUSINESS
+* head ................................. head style storage file
+* navbar ................................. navbar style storage file
+*
+*/
+@import "mixins/normalize","mixins/reset","mixins/common","mixins/variables";
+@import "dist/table","dist/select";
+@import "services/header","services/navbar","services/footer","services/user","services/jumbotron","services/pages";
+
+.jumbotron .big-title{@include setBackgroundColorAndColor(#fff,$jumbotron-big-title-background-color-blue);}
+.re-wrap .big-title{@include setBackgroundColorAndColor(#fff,$jumbotron-big-title-background-color-blue);}
+
+.md{width: 100%;background-color: $jumbotron-big-title-background-color-blue;border-radius: 7px;padding-top: 7px;
+padding-bottom: 7px;}
+
+.mgx,.dfzy,.mgx1,.dfzy1{display: inline-block;vertical-align: top;}
+.mgx,.dfzy{margin-left: 15px;margin-top: 5px;}
+
+.table2{width: calc(30% + 44px);margin-bottom: 30px;
+	thead tr{background-color: #d2d6da;}
+}
+
+
+table{width: 100%;margin-top: 3px;}
+
+.fanhui{margin-bottom:120px;margin-left: 9%;width: 91%;
+position: relative;}
+.fanhui img{position: absolute;right: 10px;top:20px;}
+.fanhui img:hover{opacity:0.7;}
+.fanhui div{position: absolute;right: 0;top:60px;z-index:1;display:none;color: #696969}

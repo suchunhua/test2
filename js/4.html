@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>jQuery手机图片触屏滑动轮播效果代码</title>
+</head>
+<style type="text/css">
+    *{
+        margin: 0;padding: 0;
+        list-style: none;
+    }
+    .main_visual{
+        height:500px;
+        border-top:1px solid #d7d7d7;
+        overflow:hidden;
+        position:relative;
+    }
+    .main_image{
+        height:100%;
+        overflow:hidden;
+        position:relative;
+    }
+    .main_image ul{
+        width:9999px;
+        height:100%;
+        overflow:hidden;
+        position:absolute;
+        top:0;
+        left:0;
+    }
+    .main_image li{
+        float:left;
+        width:100%;
+        height:100%;
+    }
+    .main_image li img{
+        display:block;
+        width:100%;
+        height:100%;
+    }
+    div.flicking_con{
+        position:absolute;
+        top:460px;
+        left:50%;
+        z-index:999;
+        width:300px;
+        height:21px;
+        margin:0 0 0 -50px;
+    }
+    div.flicking_con a{
+        float:left;
+        width:21px;
+        height:21px;
+        background:url('fd180/fd_180.png') 0 0 no-repeat;
+        display:block;
+        text-indent:-1000px;
+    }
+    div.flicking_con a.on{
+        background-position:0 -21px;
+    }
+    #btn_prev,#btn_next{
+        z-index:11111;
+        position:absolute;
+        display:block;
+        width:73px;
+        height:74px;
+        top:50%;
+        margin-top:-37px;
+        display:none;
+    }
+    #btn_prev{
+        background:url(fd180/hefei.png) no-repeat left top;
+        left:100px;
+        display: none;
+    }
+    #btn_next{
+        background:url(fd180/zhang.png) no-repeat right top;
+        right:100px;
+        display: none;
+    }
+</style>
+<body>
+<div class="main_visual">
+    <div class="flicking_con">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+    </div>
+    <div class="main_image">
+        <ul>
+            <li><img src="fd180/gene.png"/></li>
+            <li><img src="fd180/gene_before.png"/></li>
+            <li><img src="fd180/EGFR.png"/></li>
+        </ul>
+        <a href="" id="btn_prev"></a>
+        <a href="" id="btn_next"></a>
+    </div>
+</div>
+<script type="text/javascript" src="js/jQuery.js"></script>
+
+<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        //左右箭头显示与隐藏
+//        $(".main_visual").hover(function(){
+//            $("#btn_prev,#btn_next").fadeIn()
+//        },function(){
+//            $("#btn_prev,#btn_next").fadeOut()
+//        });
+//        $dragBln = false;
+
+        $(".main_image").touchSlider({
+            flexible : true,//调用
+            speed : 200,//播放速度
+            btn_prev : $("#btn_prev"),//左右箭头
+            btn_next : $("#btn_next"),
+            paging : $(".flicking_con a"),//页面相对应圆圈
+            counter : function (e){
+                $(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+            }
+        });
+
+//        $(".main_image").bind("mousedown", function() {
+//            $dragBln = false;
+//        });
+//
+//        $(".main_image").bind("dragstart", function() {
+//            $dragBln = true;
+//        });
+//
+//        $(".main_image a").click(function(){
+//            if($dragBln) {
+//                return false;
+//            }
+//        });
+//
+//        timer = setInterval(function(){
+//            $("#btn_next").click();
+//        }, 1000);
+//
+//        $(".main_visual").hover(function(){
+//            clearInterval(timer);
+//        },function(){
+//            timer = setInterval(function(){
+//                $("#btn_next").click();
+//            },1000);
+//        });
+//
+//        $(".main_image").bind("touchstart",function(){
+//            clearInterval(timer);
+//        }).bind("touchend", function(){
+//            timer = setInterval(function(){
+//                $("#btn_next").click();
+//            }, 1000);
+//        });
+    });
+</script>
+
+</body>
+</html>

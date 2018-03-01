@@ -1,0 +1,49 @@
+/**
+* CONTENTS
+* login style
+*
+* SETTINGS
+* normalize ............................. normalize style storage file
+* reset ................................. reset style storage file
+* common ................................. reset style storage file
+* 
+* COMPONENTS
+* table ................................. table style storage file
+*
+* BUSINESS
+* head ................................. head style storage file
+* navbar ................................. navbar style storage file
+*
+*/
+@import "mixins/normalize","mixins/reset","mixins/common";
+@import "dist/table";
+@import "services/header","services/navbar","services/footer","services/user";
+
+.details_wrap{width: 100%;height: 300px;padding-top: 1px;margin-top:40px;}
+.details_wrap .detail{width: 13.5%;height: 133px;margin-top: 30px;margin-left: 15%;position: relative;}
+.details_wrap .detail img[src="yuandian.png"]{margin-left: 5px;}
+.details_wrap .detail img[src="pic/23.png"]{position: absolute;bottom: 0;left: 0;}
+.details_wrap .detail .title{display: inline-block;vertical-align: top;font-weight: bold;font-size: 160%;
+    position: absolute;top: 50px;right: 0;}
+
+.wrap2{width: 80%;margin-left: calc(10% - 1px);height: 600px;position: relative;}
+.xm{position: absolute;left: 15%;top:-25px;height: 50px;background-color: #FFf;line-height: 50px;}
+.xm div{display: inline-block;vertical-align: top;margin: 0 15px;letter-spacing: 5px;font-size: 140%;font-weight: bold;}
+.xm img{margin-top: 19px;display: inline-block;vertical-align: top;}
+
+.society{border: 1px solid #A9A9A9;width: 80%;margin-left: calc(10% - 1px);table-layout: fixed;}
+.society td{height: 60px;vertical-align: middle;}
+.society td a{text-decoration: underline;}
+#bg td{height: 26px;background-color: #fff;}
+.society tr:nth-of-type(2n+1) td{background-color: #f7e7e9;}
+.society td:nth-of-type(1){width: 10%;}
+.society td:nth-of-type(2){width: 20%;}
+.society td:nth-of-type(3){width: 25%;}
+.society td:nth-of-type(4){width: 20%;}
+.society td:nth-of-type(5){width: 25%;}
+.society td:nth-of-type(2n){font-weight: bold;}
+.fanhui{margin-bottom:120px;margin-left: 9%;width: 91%;
+position: relative;}
+.fanhui img{position: absolute;right: 10px;top:20px;}
+.fanhui img:hover{opacity:0.7;}
+.fanhui div{position: absolute;right: 0;top:60px;z-index:1;display:none;color: #696969}

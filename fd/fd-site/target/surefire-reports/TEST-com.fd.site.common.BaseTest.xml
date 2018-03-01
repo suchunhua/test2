@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="com.fd.site.common.BaseTest" time="0.011" errors="1" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin"/>
+    <property name="java.vm.version" value="25.121-b13"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\workspace\fd"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\workspace\fd"/>
+    <property name="java.runtime.version" value="1.8.0_121-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_121\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\SU_CHU~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="D:\Program Files\apache-maven-3.3.9\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_121\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_121/bin/server;C:/Program Files/Java/jre1.8.0_121/bin;C:/Program Files/Java/jre1.8.0_121/lib/amd64;C:\Ruby192\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;D:\Program Files\apache-maven-3.3.9\bin;C:\Program Files\Java\jdk1.8.0_121\bin;C:\Program Files\Java\jdk1.8.0_121\jre\bin;C:\tomcat-6.0.45\lib;C:\tomcat-6.0.45\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\su_chunhua\AppData\Roaming\npm;C:\Program Files\nodejs\;D:\Program Files\eclipse;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\su_chunhua"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="user.name" value="su_chunhua"/>
+    <property name="java.class.path" value="D:\Program Files\apache-maven-3.3.9\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_121\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_121"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_121\jre\classes"/>
+    <property name="sun.stderr.encoding" value="ms936"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\Program Files\apache-maven-3.3.9\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="ms936"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.fd.site.common.BaseTest" name="initializationError" time="0.011">
+    <error message="No runnable methods" type="java.lang.Exception">java.lang.Exception: No runnable methods
+	at org.junit.runners.BlockJUnit4ClassRunner.validateInstanceMethods(BlockJUnit4ClassRunner.java:191)
+	at org.junit.runners.BlockJUnit4ClassRunner.collectInitializationErrors(BlockJUnit4ClassRunner.java:128)
+	at org.junit.runners.ParentRunner.validate(ParentRunner.java:416)
+	at org.junit.runners.ParentRunner.&lt;init&gt;(ParentRunner.java:84)
+	at org.junit.runners.BlockJUnit4ClassRunner.&lt;init&gt;(BlockJUnit4ClassRunner.java:65)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.&lt;init&gt;(SpringJUnit4ClassRunner.java:127)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.junit.internal.builders.AnnotatedBuilder.buildRunner(AnnotatedBuilder.java:104)
+	at org.junit.internal.builders.AnnotatedBuilder.runnerForClass(AnnotatedBuilder.java:86)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
+	at org.junit.internal.requests.ClassRequest.getRunner(ClassRequest.java:33)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:250)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>13:20:24,590 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+13:20:24,590 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+13:20:24,590 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/D:/workspace/fd/fd-site/target/classes/logback.xml]
+13:20:24,713 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+13:20:24,723 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+13:20:24,731 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+13:20:24,801 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+13:20:24,803 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILEDEBUG]
+13:20:24,807 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@14:13 - no applicable action for [Encoding], current ElementPath  is [[configuration][appender][Encoding]]
+13:20:24,823 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy - No compression will be used
+13:20:24,824 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy - Will use the pattern ../logs/log-debug.%d{yyyy-MM-dd}.%i.log for the active file
+13:20:24,826 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3c0f93f1 - The date pattern is &apos;yyyy-MM-dd&apos; from file name pattern &apos;../logs/log-debug.%d{yyyy-MM-dd}.%i.log&apos;.
+13:20:24,826 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3c0f93f1 - Roll-over at midnight.
+13:20:24,829 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3c0f93f1 - Setting initial period to Mon Jul 10 13:20:24 CST 2017
+13:20:24,835 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[FILEDEBUG] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+13:20:24,835 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[FILEDEBUG] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+13:20:24,835 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[FILEDEBUG] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+13:20:24,846 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILEDEBUG] - Active log file name: ../logs/log-debug.log
+13:20:24,846 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILEDEBUG] - File property is set to [../logs/log-debug.log]
+13:20:24,847 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+13:20:24,847 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILEINFO]
+13:20:24,847 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@38:13 - no applicable action for [Encoding], current ElementPath  is [[configuration][appender][Encoding]]
+13:20:24,851 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy - No compression will be used
+13:20:24,851 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy - Will use the pattern ../logs/log-info.%d{yyyy-MM-dd}.%i.log for the active file
+13:20:24,852 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@31dc339b - The date pattern is &apos;yyyy-MM-dd&apos; from file name pattern &apos;../logs/log-info.%d{yyyy-MM-dd}.%i.log&apos;.
+13:20:24,852 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@31dc339b - Roll-over at midnight.
+13:20:24,852 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@31dc339b - Setting initial period to Mon Jul 10 13:20:24 CST 2017
+13:20:24,855 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[FILEINFO] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+13:20:24,855 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[FILEINFO] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+13:20:24,855 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[FILEINFO] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+13:20:24,858 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILEINFO] - Active log file name: ../logs/log-info.log
+13:20:24,858 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILEINFO] - File property is set to [../logs/log-info.log]
+13:20:24,859 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+13:20:24,859 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILEWARN]
+13:20:24,859 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@62:13 - no applicable action for [Encoding], current ElementPath  is [[configuration][appender][Encoding]]
+13:20:24,861 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy - No compression will be used
+13:20:24,861 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy - Will use the pattern ../logs/log-warn.%d{yyyy-MM-dd}.%i.log for the active file
+13:20:24,862 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@544fe44c - The date pattern is &apos;yyyy-MM-dd&apos; from file name pattern &apos;../logs/log-warn.%d{yyyy-MM-dd}.%i.log&apos;.
+13:20:24,862 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@544fe44c - Roll-over at midnight.
+13:20:24,862 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@544fe44c - Setting initial period to Mon Jul 10 13:20:24 CST 2017
+13:20:24,863 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[FILEWARN] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+13:20:24,863 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[FILEWARN] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+13:20:24,863 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[FILEWARN] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+13:20:24,865 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILEWARN] - Active log file name: ../logs/log-warn.log
+13:20:24,865 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILEWARN] - File property is set to [../logs/log-warn.log]
+13:20:24,866 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+13:20:24,866 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILEERROR]
+13:20:24,866 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@86:13 - no applicable action for [Encoding], current ElementPath  is [[configuration][appender][Encoding]]
+13:20:24,868 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy - No compression will be used
+13:20:24,868 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy - Will use the pattern ../logs/log-error.%d{yyyy-MM-dd}.%i.log for the active file
+13:20:24,869 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@31610302 - The date pattern is &apos;yyyy-MM-dd&apos; from file name pattern &apos;../logs/log-error.%d{yyyy-MM-dd}.%i.log&apos;.
+13:20:24,869 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@31610302 - Roll-over at midnight.
+13:20:24,869 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@31610302 - Setting initial period to Mon Jul 10 13:20:24 CST 2017
+13:20:24,870 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[FILEERROR] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+13:20:24,870 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[FILEERROR] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+13:20:24,870 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[FILEERROR] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+13:20:24,870 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILEERROR] - Active log file name: ../logs/log-error.log
+13:20:24,870 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILEERROR] - File property is set to [../logs/log-error.log]
+13:20:24,871 |-INFO in ch.qos.logback.classic.joran.action.LevelAction - ROOT level set to INFO
+13:20:24,871 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+13:20:24,872 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILEDEBUG] to Logger[ROOT]
+13:20:24,872 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILEINFO] to Logger[ROOT]
+13:20:24,872 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILEWARN] to Logger[ROOT]
+13:20:24,872 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILEERROR] to Logger[ROOT]
+13:20:24,872 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+13:20:24,872 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@71318ec4 - Registering current configuration as safe fallback point
+
+</system-out>
+  </testcase>
+</testsuite>

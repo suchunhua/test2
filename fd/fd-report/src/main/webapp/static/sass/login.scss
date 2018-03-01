@@ -1,0 +1,46 @@
+/**
+* CONTENTS
+* login style
+*
+* SETTINGS
+* normalize ............................. normalize style storage file
+* reset ................................. reset style storage file
+* common ................................. reset style storage file
+* 
+* COMPONENTS
+* checkbox ................................. checkbox style storage file
+* form ................................. form style storage file
+*
+* BUSINESS
+* head ................................. head style storage file
+*
+*/
+@import "mixins/normalize","mixins/reset","mixins/common";
+@import "dist/form","dist/checkbox";
+@import "services/header","services/container","services/footer";
+
+.login{
+	.title{float:none;}
+	form{
+		@extend .shadow-form;margin: 68px auto; 
+		.error-msg{
+			color: #d34756; margin: 40px auto 30px; font-size: 20px; height: 20px; width: 362px;
+		}
+		.items{
+			width: 362px;margin: 0 auto 30px;
+    		&:first-child{margin-top: 90px;}
+			.icons-person{ background: url("../img/yhm.png"); width: 27px; height: 26px; display: inline-block; margin-top: 10px; float: left;}
+			.icons-lock{background: url("../img/mima.png"); width: 28px; height: 25px; display: inline-block; float: left; margin-top: 10.5px;}
+			.login-text{
+				outline: none;width: 270px; height: 40px; border-radius: 25px; border: 2px solid #5a5858; background-color: #ededed; margin-left: 30px;padding:0px 15px;
+				&:focus{border-color:#9CBEF5;}
+			}
+    		.login-submit{width: 362px;}
+    		.forget{float: right;}
+    		span.checkbox{top: 2px;left: -4px;}
+		}
+	}
+}
+
+
+

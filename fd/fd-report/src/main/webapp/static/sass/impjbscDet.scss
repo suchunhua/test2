@@ -1,0 +1,49 @@
+/**
+* CONTENTS
+* login style
+*
+* SETTINGS
+* normalize ............................. normalize style storage file
+* reset ................................. reset style storage file
+* common ................................. reset style storage file
+* 
+* COMPONENTS
+* table ................................. table style storage file
+*
+* BUSINESS
+* head ................................. head style storage file
+* navbar ................................. navbar style storage file
+*
+*/
+@import "mixins/normalize","mixins/reset","mixins/common","mixins/variables";
+@import "dist/table";
+@import "services/header","services/navbar","services/footer","services/user","services/jumbotron","services/pages";
+
+.jumbotron .big-title{@include setBackgroundColorAndColor(#fff,$jumbotron-big-title-background-color-blue);}
+.re-wrap .big-title{@include setBackgroundColorAndColor(#fff,$jumbotron-big-title-background-color-blue);}
+
+.option{width: 100%;background-color: $jumbotron-big-title-background-color-blue;margin-top: 45px;border-radius: 7px;padding-top: 7px;
+    padding-bottom: 7px;}
+
+.zs{display: inline-block;vertical-align: top;margin-top: 5px;margin-left: 15px;}
+.option1,.option2{display: inline-block;vertical-align: top;margin-left: 25px;}
+.option1{margin-left: 15px;padding-left: 20px;padding-right: 9px;}
+.option2{border: 4px solid #7a848e;border-radius: 3px;padding: 2px;}
+.option select{background-color: transparent;border: 4px solid #7a848e;height: 30px;border-radius: 3px;}
+
+.title-garden-table{width: 100%;margin-top: 30px;margin-bottom:20px;
+	thead tr th{@include setBackgroundColorAndColor(#fff,$jumbotron-big-title-background-color-blue);}
+}
+
+.analysis{text-align:left;line-height: 25px;}
+.qwjxwd{margin-left:10px;}
+.qwjx_wrap{font-weight:bold;color:red;display:none;}
+.qwjxjy,.qwjxwd{font-weight:bold;color:red;}
+
+.yizu{margin-left: 10%;width: 80%;position: relative;margin-top: 15px;margin-bottom:80px;}
+.yizu>div{position: absolute;top:0;right: 0;font-size: 90%;}
+.fanhui{margin-bottom:120px;margin-left: 9%;width: 91%;
+position: relative;}
+.fanhui img{position: absolute;right: 10px;top:20px;}
+.fanhui img:hover{opacity:0.7;}
+.fanhui div{position: absolute;right: 0;top:60px;z-index:1;display:none;color: #696969}

@@ -1,0 +1,9 @@
+.btn{width: 100%; display: inline-block; text-align: center; border-radius: 5px;padding:5% 0px;}
+.btn-info{background-color: #b81b2c;color: #fff;box-shadow: 1px 1px 3px #e2b7bc;}
+.btn-danger{background-color: #b81c2d;}
+.btn-blue{background-color: #7CB5EC;}
+.btn-transparent{border-style:solid; border-color:#fff; box-shadow: inset 0px 0px 10px #fff; font-size:18px; }
+
+.btn-cont-white{color:#fff;margin-bottom: 5%;}
+.btn-red{@extend .btn;background-color: #e54051;color: #fff;display: block;box-shadow: 1px 1px 3px #ffa5b1;}
+.btn-link{border: 1px solid #50d1bf; color: #50d1bf; display: block; text-align: center; width: 144px; margin: 0 auto; padding: 7px 5px; border-radius: 7px; position: absolute; left: 0px; right: 0px;}

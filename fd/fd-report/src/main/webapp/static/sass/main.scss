@@ -1,0 +1,107 @@
+/**
+* CONTENTS
+* main style
+*
+* SETTINGS
+* normalize ............................. normalize style storage file
+* reset ................................. reset style storage file
+* common ................................. reset style storage file
+* 
+* COMPONENTS
+* form ................................. form style storage file
+*
+* BUSINESS
+* head ................................. head style storage file
+*
+*/
+@import "mixins/normalize","mixins/reset","mixins/common";
+@import "dist/form";
+@import "services/header","services/container","services/footer";
+body{@extend .cursor-triangle;}
+.menu{
+	@extend .clear;float: left;margin: 100px 0px 200px 60px;
+	li{    
+    	h3{
+    	background-color: #b71b2c; color: #fff; width: 200px; text-align: center; line-height: 38px; height: 38px; box-shadow: 5px 5px 5px #c3c2c2; }
+		.sub-menu{
+			margin-top: 20px; box-shadow:5px 5px 5px #c2c1c1; width: 200px; margin-bottom: 13px; 
+			li{
+				@extend .cursor-triangle;background-color: #dedede; border-bottom: 1px solid #c3c3c3; color: #323232; width: 200px; text-align: center; line-height: 38px; height: 38px; 
+     			&:first-child{position: relative;
+					i{
+	    				width: 0px; height: 0px; border-top: 7px solid transparent; border-right: 7px solid transparent; border-bottom: 10px solid #dedede; border-left: 7px solid transparent; position: absolute; top: -17px; display: block; left: 10px;
+	    			}
+     			}
+     			&:last-child{border-bottom: none;}
+     			a{width: 100%;height: 100%;display: block;@extend .cursor-triangle;
+     				&:hover{
+     					color: #696969;
+     				}	
+     			}
+			}
+		}
+	}
+}
+
+.menu-actived{
+    li{
+        h3{background-color: #dedede; color: #323232; text-align: left; font-weight: bold; text-indent: 20px;}
+        .sub-menu{
+            li{
+                background-color: #dedede;border-bottom-color: #afaaab;
+                &:first-child{
+                    i{border-bottom-color: #dedede;}
+                }
+                &.actived{
+                    background-color: #b71b2c;
+                    i{border-bottom-color:#dd484e;}
+                    a{color:#fff;
+                        &:hover{color: #696969;}
+                    }
+                }
+                a{color:#323232;}
+            }
+        }
+    }
+}
+
+form{
+    @extend .shadow-form;margin-left: 150px;float: left;margin-top: 95px;@include attr-calc(margin-left,'(100% - 760px)/2');
+    label{ width: 335px; display: block; margin: 0 auto; overflow: hidden; line-height: 36px; margin-bottom: 12px;
+        &:first-child{margin-top:65px;}
+        span{float: left;}
+        input{
+        	outline:none;float: right; width: 211px; height: 32px; border-radius: 25px; border: 2px solid #5a5858; background-color: #ededed;padding: 0px 15px;
+       		&:focus{border-color:#9CBEF5;} 
+        }
+    }
+    .save{width: 335px;margin: 0 auto;}
+    .goback{width: 335px;margin:0 auto 90px auto;letter-spacing: 0px;}
+}
+
+.report-info{
+    width: 100%;margin-bottom: 25px;
+    @at-root .table-head{    
+        float: left;color: #b71b2c; width: 580px; font-size: 30px; margin: 100px 0px 35px 95px;
+    }
+    @at-root .report-info-box{margin-left: 95px;float: left;width: 580px;margin-bottom: 60px;@include attr-calc(width,'100% - 355px');}
+    thead{
+        tr{
+            th{border: 2px solid #707070;background-color: #ebebeb;height: 44px; text-align: center; line-height: 44px; }
+        }
+    }
+    tr{
+        td{    
+            border: 2px solid #707070; height: 44px; text-align: center; line-height: 44px; background-color: #fff;color:#323232;vertical-align: middle;
+            a span{ border-bottom: 2px solid #d62539;padding-bottom: 4px;}
+        }
+    }
+}
+.long-table{
+    margin-left: 0px;float: left;
+    @at-root .table-head{    
+        margin: 100px 0px 35px 0px;
+    }
+}
+
+.fa-emark{vertical-align:  middle;margin: 0px 0px 3px 5px;}

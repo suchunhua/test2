@@ -1,0 +1,40 @@
+/**
+* CONTENTS
+* login style
+*
+* SETTINGS
+* normalize ............................. normalize style storage file
+* reset ................................. reset style storage file
+* common ................................. reset style storage file
+* 
+* COMPONENTS
+* table ................................. table style storage file
+*
+* BUSINESS
+* head ................................. head style storage file
+* navbar ................................. navbar style storage file
+*
+*/
+@import "mixins/normalize","mixins/reset","mixins/common","mixins/variables";
+@import "dist/table";
+@import "services/header","services/navbar","services/footer","services/user","services/jumbotron","services/pages";
+
+.re-wrap{margin-top: 100px;
+	.big-title{@include setBackgroundColorAndColor(#fff,$jumbotron-big-title-background-color-blue);}
+}
+.search{height:30px;position:relative;width: 100%;}
+.search_inner{position:absolute;top:0;right:20px;padding-top:1px;}
+.search_inner input,.search_inner div{height:25px;display: inline-block;vertical-align: top;}
+.search_inner div{margin-top:5px;}
+.search_inner input[type="submit"]{height:29px;}
+
+.title-garden-table{
+	width: 100%;margin-top: 50px;
+	thead tr th{@include setBackgroundColorAndColor(#fff,$jumbotron-big-title-background-color-blue);height: 45px;font-weight: 700;}
+}
+
+.fanhui{margin-bottom:120px;margin-left: 9%;width: 91%;
+position: relative;}
+.fanhui img{position: absolute;right: 10px;top:20px;}
+.fanhui img:hover{opacity:0.7;}
+.fanhui div{position: absolute;right: 0;top:60px;z-index:1;display:none;color: #696969}

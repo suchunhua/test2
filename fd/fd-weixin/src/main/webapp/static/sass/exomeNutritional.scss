@@ -1,0 +1,10 @@
+/** * 个体体质模块 **/
+@charset 'utf-8';
+@import "exomeBase";
+
+.nutritionBox{
+	 width: 94%; margin: 0 auto; background-color: #fff; border-radius: 5px; box-shadow: 2px 2px 8px #e1e1e1;
+	 h1{
+		 @include media-font-size(16px,18px,20px,22px,30px); border-bottom: 1px solid #eeeeee;padding:5% 3%;
+	 }
+}

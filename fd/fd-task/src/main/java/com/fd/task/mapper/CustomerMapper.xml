@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fd.task.dao.CustomerMapper" >
+  <resultMap id="BaseResultMap" type="com.fd.task.entity.Customer" >
+    <id column="customerId" property="customerid" jdbcType="INTEGER" />
+    <result column="customerName" property="customername" jdbcType="VARCHAR" />
+    <result column="customerAccount" property="customeraccount" jdbcType="VARCHAR" />
+    <result column="customerPassword" property="customerpassword" jdbcType="VARCHAR" />
+    <result column="customerTele" property="customertele" jdbcType="VARCHAR" />
+    <result column="customerCardId" property="customercardid" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    customerId, customerName, customerAccount, customerPassword, customerTele, customerCardId
+  </sql>
+  <select id="listCustomer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from customer
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from customer
+    where customerId = #{customerid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.fd.task.entity.Customer" >
+    insert into customer (customerId, customerName, customerAccount, 
+      customerPassword, customerTele, customerCardId
+      )
+    values (#{customerid,jdbcType=INTEGER}, #{customername,jdbcType=VARCHAR}, #{customeraccount,jdbcType=VARCHAR}, 
+      #{customerpassword,jdbcType=VARCHAR}, #{customertele,jdbcType=VARCHAR}, #{customercardid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.fd.task.entity.Customer" >
+    insert into customer
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="customerid != null" >
+        customerId,
+      </if>
+      <if test="customername != null" >
+        customerName,
+      </if>
+      <if test="customeraccount != null" >
+        customerAccount,
+      </if>
+      <if test="customerpassword != null" >
+        customerPassword,
+      </if>
+      <if test="customertele != null" >
+        customerTele,
+      </if>
+      <if test="customercardid != null" >
+        customerCardId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="customerid != null" >
+        #{customerid,jdbcType=INTEGER},
+      </if>
+      <if test="customername != null" >
+        #{customername,jdbcType=VARCHAR},
+      </if>
+      <if test="customeraccount != null" >
+        #{customeraccount,jdbcType=VARCHAR},
+      </if>
+      <if test="customerpassword != null" >
+        #{customerpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="customertele != null" >
+        #{customertele,jdbcType=VARCHAR},
+      </if>
+      <if test="customercardid != null" >
+        #{customercardid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.fd.task.entity.Customer" >
+    update customer
+    <set >
+      <if test="customername != null" >
+        customerName = #{customername,jdbcType=VARCHAR},
+      </if>
+      <if test="customeraccount != null" >
+        customerAccount = #{customeraccount,jdbcType=VARCHAR},
+      </if>
+      <if test="customerpassword != null" >
+        customerPassword = #{customerpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="customertele != null" >
+        customerTele = #{customertele,jdbcType=VARCHAR},
+      </if>
+      <if test="customercardid != null" >
+        customerCardId = #{customercardid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where customerId = #{customerid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.fd.task.entity.Customer" >
+    update customer
+    set customerName = #{customername,jdbcType=VARCHAR},
+      customerAccount = #{customeraccount,jdbcType=VARCHAR},
+      customerPassword = #{customerpassword,jdbcType=VARCHAR},
+      customerTele = #{customertele,jdbcType=VARCHAR},
+      customerCardId = #{customercardid,jdbcType=VARCHAR}
+    where customerId = #{customerid,jdbcType=INTEGER}
+  </update>
+</mapper>

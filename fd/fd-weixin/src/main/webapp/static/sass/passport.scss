@@ -1,0 +1,51 @@
+/**
+* 登录忘记密码模块
+*
+*/
+@charset 'utf-8';
+@import "dist/button","dist/input","dist/form";
+@import "mixins/normalize","mixins/reset";
+@import "services/view","services/header";
+
+.view-background{background: url("../img/login-background.png") center center no-repeat;background-size: cover;}
+.logo{background: url(../img/logo.png) no-repeat center center ;width: 112px;height: 76px; display: block; margin: 1em auto;background-size: contain;margin-top:20%;}
+.login-page{
+	padding: 0px 40px;
+	form{overflow: hidden;}
+	.item{
+		position: relative;margin: 0px;overflow:hidden;background-color: #fff;border-radius: 5px;padding: 0px 20px;@include media-font-size();
+		&:nth-child(1){
+			input{border-bottom: 1px solid #eeeeee;}
+		}
+		input{border: none; width: 100%; background:#fff;height: 30px;padding: 5% 0px;box-sizing: content-box;
+			&:focus{background-color:#fff;outline: none;}
+			&:active{background-color:#fff;}
+		}
+		&.error{
+			line-height: 26px;display: none;margin-top: 10px;padding: 1% 0px;@include media-font-size(12px,14px,16px,18px,20px);
+    		img{float: left;}
+			span{color: #b81c2d;}
+		}
+		&:nth-child(1){border-bottom-left-radius: initial; border-bottom-right-radius: initial;}
+		&:nth-child(2){border-top-left-radius: initial; border-top-right-radius: initial;}
+	}
+	#loginBtn{@extend .btn;color: #83323A; background:#fff;margin-top:10px;padding: 6% 0px;@include media-font-size();}
+	.weixin-go{color: #fff; float: left; @include media-font-size(); margin-top: 15px;
+		img{ float: left; margin-right: 5px;width: 22%;vertical-align: middle;}
+	}
+	.find-pwd{color: #fff; float: right;@include media-font-size();margin-top: 15px;}
+}
+
+.form{
+	margin-top:85px;@include media-font-size();
+	input{margin:0px 0px 20px 0px;
+		&.code{@include attr-calc(width,"100% - 120px");}
+	}
+	.error{
+		margin: 25px 0px;height: 26px;line-height: 26px;display: none;
+		img{float: left;}
+		span{color: #b81c2d;}
+	}
+	.disabled{background-color: #e7e7e7;}
+	span.get-code{width: 120px; cursor: pointer; height: 40px; vertical-align: top; box-shadow: none; font-size: 14px; padding: 13px 0px;}
+}

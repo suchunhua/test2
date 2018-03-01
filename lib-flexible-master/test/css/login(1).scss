@@ -1,0 +1,63 @@
+@import "px2rem";
+
+body{
+  font-family: "Microsoft YaHei", sans-serif;
+  margin: 0 auto;
+  padding: 0;
+
+}
+.view{
+  width: 100%;
+  background: linear-gradient(#23beb0, #e0f5f3);
+  overflow: hidden;
+  min-height: px2rem(1136);
+  position: relative;
+}
+.logo{
+  width: px2rem(192);
+  height: px2rem(131);
+  margin: px2rem(294) auto px2rem(67);
+  display: block;
+}
+.login-page{
+  padding: 0 px2rem(40);
+  .item{
+    border-bottom: px2rem(1) solid #ffffff;padding: 0 px2rem(10);display: flex;display: -webkit-flex;
+    &:nth-of-type(1){margin-bottom: px2rem(55);}
+    input{
+      border: none;height: px2rem(45);background: transparent;
+      &:hover{
+        outline: none;
+      }
+    }
+    i{
+      width:px2rem(40);
+      height: px2rem(40);
+      &.icon-fd-person{
+        background: url("../img/icon/icon-fd-person.png");
+        background-size: cover;
+
+      }
+      &.icon-fd-lock{
+        background: url("../img/icon/icon-fd-lock.png");
+        background-size: cover;
+      }
+    }
+
+  }
+  a{
+    width: px2rem(562);
+    height: px2rem(66);
+    color: #ffffff;
+    /*@include font-dpr(32px);*/
+    font-size: px2rem(32);
+    text-align: center;
+    border-radius: px2rem(10);
+    box-shadow: inset 0 0 px2rem(10) #ffffff;
+    display: block;
+    line-height: px2rem(66);
+    border: px2rem(1) solid #ffffff;
+    text-decoration: none;
+    margin:px2rem(80) auto 0;
+  }
+}

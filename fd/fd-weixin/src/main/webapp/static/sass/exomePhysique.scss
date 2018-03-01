@@ -1,0 +1,64 @@
+/** * 个体体质模块 **/
+@charset 'utf-8';
+@import "exomeBase";
+@import "services/popup";
+
+.shrink{
+	@include media-font-size();margin: 10px 3%; background-color: #fff; box-shadow: 2px 2px 8px #e1e1e1; overflow: hidden; padding: 10px 3%; border-radius: 5px;
+	&.active{
+		.shrink-title{
+			img{transform: rotate(360deg);}
+		}
+		.shrink-list{
+			display: block;
+		}
+	}
+	.shrink-title{
+		padding: 3% 0;
+		img{margin-top: 1%;width: 17px;float: right;transform: rotate(180deg);transition: All 0.4s ease-in-out;}
+	}
+	.shrink-list{
+		border-top: 1px solid #dfdfdf;padding: 10px 0px 10px 3%;display: none;@include media-font-size(12px,14px,16px,18px,22px);
+		li{
+			margin: 5% 0px;color:#666;
+			i{ float:right;display: inline-block; margin-right: 3%;vertical-align: middle;color:#666; margin-top: 1%; }
+			span{float:right;margin-right: 3%;color:#666;}
+		}
+	}
+}
+
+.img-span{
+	padding: 0px 3%;overflow: hidden;margin-top: 25px;
+	li{
+		width: 50%; float: left;padding: 5% 10%; text-align: center;
+		img{display: block;width: 100%;margin: 0 auto 8%;}
+		span{@include media-line-size-height();}
+	}
+}
+
+.contentRighttop{width: 94%;}
+.physique-detail{
+	display: none;padding: 10px 3%;
+	h1{text-align: left; @include media-font-size(); box-sizing: content-box;padding: 10px 0px;font-weight: bold;}
+	p{
+		border-bottom: 1px solid #dfdfdf;text-align: left;padding: 5px 0px 10px; @include media-font-size();font-weight: bold;
+		span{
+			&.red{color: #ff4958;}
+			&.green{color: #0ad009;}
+			&.blue{color: #33a0ff;}
+		}
+	}
+	table{
+		width: 94%;margin: 3% auto;text-align: left;
+		thead{
+			tr{
+				th{padding: 3% 0;color:#999;@include media-font-size();text-align: center; }
+			}
+		}
+		tbody{
+			tr{
+				td{ padding: 3% 0;color:#494949;@include media-font-size(12px,14px,16px,18px,22px);text-align: center; }
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.wrap{min-width:1000px;margin:0 auto;max-width: 1200px;}
+.clear{clear:both;}
+
+.cursor-triangle{cursor: url("../img/5.cur"), pointer;}
+.cursor-pen{cursor:url("../img/pen_im.cur"),pointer;}
+
+
+//
+// text-overflow
+// --------------------------------------------------
+.text-overflow{
+	overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; 
+}
+
+//
+// attr-calc
+// --------------------------------------------------
+@mixin attr-calc($property:width,$expression:100%){
+	$propertyToUpper:to-upper-case($property);  //In order to solve the coexistence of -webkit-calc and -moz-calc
+	#{$property}: calc(#{$expression});
+    #{$propertyToUpper}: -webkit-calc(#{$expression});
+    #{$property}: -moz-calc(#{$expression});
+}

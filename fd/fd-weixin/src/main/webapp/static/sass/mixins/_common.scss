@@ -1,0 +1,54 @@
+@charset 'utf-8';
+@import "class";
+
+//
+// attr-calc
+// --------------------------------------------------
+@mixin attr-calc($property:width,$expression:100%){
+	$propertyToUpper:to-upper-case($property);  //In order to solve the coexistence of -webkit-calc and -moz-calc
+	#{$property}: calc(#{$expression});
+    #{$propertyToUpper}: -webkit-calc(#{$expression});
+    #{$property}: -moz-calc(#{$expression});
+}
+
+//
+// line-light font-size height eq one value
+// --------------------------------------------------
+@mixin line-size-height($value){
+	line-height: $value;
+	font-size: $value;
+	height: $value;
+}
+
+//
+// Font size, pitch, height of various mobile terminals
+// --------------------------------------------------
+@mixin media-line-size-height($iPhone5:14px,$iPhone6:16px,$iPhone6plus:18px,$iPhone7:20px,$iPad:30px){
+	@include line-size-height($iPhone5); 
+	@media screen and (min-width:375px) and (max-width:413px) {@include line-size-height($iPhone6); }
+	@media screen and (min-width:414px) and (max-width:559px) {@include line-size-height($iPhone6plus); }
+	@media screen and (min-width:560px) and (max-width:639px) {@include line-size-height($iPhone7); }
+	@media screen and (min-width:640px) {@include line-size-height($iPad); }
+}
+
+//
+// Font size of various mobile terminals
+// --------------------------------------------------
+@mixin media-font-size($iPhone5:14px,$iPhone6:16px,$iPhone6plus:18px,$iPhone7:20px,$iPad:30px){
+	font-size:$iPhone5; 
+	@media screen and (min-width:375px) and (max-width:413px) {font-size:$iPhone6; }
+	@media screen and (min-width:414px) and (max-width:559px) {font-size:$iPhone6plus; }
+	@media screen and (min-width:560px) and (max-width:639px) {font-size:$iPhone7; }
+	@media screen and (min-width:640px) {font-size:$iPad; }
+}
+
+//
+// height of various mobile terminals
+// --------------------------------------------------
+@mixin media-height($iPhone5:40px,$iPhone6:44px,$iPhone6plus:48px,$iPhone7:52px,$iPad:72px){
+	height:$iPhone5; 
+	@media screen and (min-width:375px) and (max-width:413px) {height:$iPhone6; }
+	@media screen and (min-width:414px) and (max-width:559px) {height:$iPhone6plus; }
+	@media screen and (min-width:560px) and (max-width:639px) {height:$iPhone7; }
+	@media screen and (min-width:640px) {height:$iPad; }
+}
